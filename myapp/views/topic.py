@@ -1,20 +1,23 @@
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
-from myapp.models.user import User
-from myapp.serializers.user import UserSerializer
+from myapp.models.topic import Topic
+from myapp.serializers.topic import TopicSerializer
 
 
 @csrf_exempt
-def user_list(request):
+def topic_list(request):
+    """
+    List all code topics, or create a new topic.
+    """
     if request.method == 'GET':
-        users = User.objects.all()
-        serializer = UserSerializer(users, many=True)
+        topic = Topic.objects.all()
+        serializer = TopicSerializer(topic, many=True)
         return JsonResponse(serializer.data, safe=False)
 
     elif request.method == 'POST':
         data = JSONParser().parse(request)
-        serializer = UserSerializer(data=data)
+        serializer = TopicSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
             return JsonResponse(serializer.data, status=201)
@@ -22,24 +25,27 @@ def user_list(request):
 
 
 @csrf_exempt
-def user_detail(request, pk):
+def topic_detail(request, pk):
+    """
+    Retrieve, update or delete a code topics.
+    """
     try:
-        user = User.objects.get(pk=pk)
-    except User.DoesNotExist:
+        topic = Topic.objects.get(pk=pk)
+    except Topic.DoesNotExist:
         return HttpResponse(status=404)
 
     if request.method == 'GET':
-        serializer = UserSerializer(user)
+        serializer = TopicSerializer(topic)
         return JsonResponse(serializer.data)
 
     elif request.method == 'PUT':
         data = JSONParser().parse(request)
-        serializer = UserSerializer(user, data=data)
+        serializer = TopicSerializer(topic, data=data)
         if serializer.is_valid():
             serializer.save()
             return JsonResponse(serializer.data)
         return JsonResponse(serializer.errors, status=400)
 
     elif request.method == 'DELETE':
-        user.delete()
+        topic.delete()
         return HttpResponse(status=204)
