@@ -8,6 +8,11 @@ class User(models.Model):
     email = models.CharField(max_length=50, blank=False, null=False)
     wordAttemp = models.IntegerField(default=7)
     active = models.BooleanField(default=True)
-    
+    createdAt = models.DateTimeField(auto_now_add=True)
+    updateAt = models.DateTimeField(auto_now_add=True)
+
     def __str__(self):
         return self.username
+
+    class Meta:
+        ordering = ['createdAt']
