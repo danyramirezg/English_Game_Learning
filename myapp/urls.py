@@ -10,8 +10,10 @@ urlpatterns = [
             # Topic endpoints
             path('topic/', topic.topic_list),
             path('topic/<int:pk>/', topic.topic_detail),
+            path('api/pod_Words/', word.WordList),
+            #word endpoints
+            path('api/pod_Words/<int:pk>/', views.wordDetail),
             # other model endpoints here
-            
             # translator API endpoint
             path('api/pod_Words/<word>', translator.translate)
         ]
