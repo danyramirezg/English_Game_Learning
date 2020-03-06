@@ -9,6 +9,9 @@ class Word(models.Model):
    traslation = models.CharField(max_length=30, blank=False, null=False)
    access = models.BooleanField(default=True, editable=False)
    attemps = models.IntegerField(default=0, editable=False)
+   created_at = models.DateTimeField(auto_now_add=True, editable=False)
+   update_at = models.DateTimeField(auto_now_add=True, editable=False)
  
+
    def __str__(self):
        return self.word

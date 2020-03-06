@@ -7,6 +7,9 @@ from myapp.serializers.user import UserSerializer
 
 @api_view(['GET', 'POST'])
 def user_list(request):
+    """
+    List all code users, or create a new user.
+    """
     if request.method == 'GET':
         users = User.objects.all()
         serializer = UserSerializer(users, many=True)
