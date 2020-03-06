@@ -1,10 +1,9 @@
 from rest_framework import serializers
 from myapp.models.word import Word
-from myapp.models.user import User
-from myapp.models.topic import Topic
 
-class WordSerializer(serializers.Serializer):
-    class meta:
+
+class WordSerializer(serializers.ModelSerializer):
+    class Meta:
         model = Word
         fields = ['id', 'user', 'topic', 'word', 'traslation',
         'access', 'attemps',

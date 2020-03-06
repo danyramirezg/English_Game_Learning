@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from myapp.models.word import Word
 from myapp.serializers.word import WordSerializer
 
+
 @api_view(['GET'])
 def word_list(request):
     """
