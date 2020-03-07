@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #48D1CC;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  	position: absolute;
+  	left: 50%;
+  	top: 7%;
+  	transform: translateX(-50%);
+  	width: 50%;
+  	padding: 16px;
+  	-webkit-box-shadow: 0px 13px 48px -17px rgba(0,0,0,0.75);
+  	-moz-box-shadow: 0px 13px 48px -17px rgba(0,0,0,0.75);
+  	box-shadow: 0px 13px 48px -17px rgba(0,0,0,0.75); 
+	background-color: #48C1CC;
+}
+
+/* Full-width input fields */
+input {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #4CAF50;
+  margin-bottom: 25px;
+}
+
+h1, label {
+	color: green;
+	text-align: center;
+}
+
+/* Set a style for the submit button */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity: 0.5;
+}

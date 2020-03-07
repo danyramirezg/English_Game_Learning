@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block extra_head %}
+	<script src="{% static 'js/home.js' %}">Couldn't load the js/home.js script</script>
+{% endblock extra_head %}
+{% block content %}
+	<h1> English Game Learning </h1>
+
+	<hr>
+	<button type="button" id="play">  PLAY </button>
+	<br></b>
+	<button type="button" id="login">  LOGIN </button>
+	<br></b>
+	<button type="button" id="sign_up">  SIGN UP </button>
+	<br></b>
+{% endblock %}
