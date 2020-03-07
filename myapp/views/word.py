@@ -5,7 +5,7 @@ from myapp.models.word import Word
 from myapp.serializers.word import WordSerializer
 
 
-@api_view(['GET'])
+@api_view(['GET', 'POST'])
 def word_list(request):
     """
     List all code word, or create a new word.
@@ -38,7 +38,7 @@ def word_detail(request, pk):
         return Response(serializer.data)
 
     elif request.method == 'PUT':
-        serializer = WordSerializer(snippet, data=request.data)
+        serializer = WordSerializer(word, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
