@@ -6,6 +6,6 @@ class WordSerializer(serializers.ModelSerializer):
     class Meta:
         model = Word
         fields = ['id', 'user', 'topic', 'word', 'translation',
-        'access', 'attemps',
-        'created_at','update_at'
-        ]
+                  'access', 'attempts',
+                  'created_at', 'update_at'
+                  ]
