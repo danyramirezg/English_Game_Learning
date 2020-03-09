@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 """" This class create a Word model """
 
@@ -10,8 +11,8 @@ class Word(models.Model):
     translation = models.CharField(max_length=30, blank=False, null=False)
     access = models.BooleanField(default=True, editable=False)
     attempts = models.IntegerField(default=0, editable=False)
-    created_at = models.DateTimeField(auto_now_add=True, editable=False)
-    update_at = models.DateTimeField(auto_now_add=True, editable=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(default=timezone.now, editable=False)
 
     def __str__(self):
         return self.word

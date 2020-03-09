@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 """" This class create a User model """
 
@@ -10,8 +11,8 @@ class User(models.Model):
     email = models.CharField(max_length=50, blank=False, null=False)
     word_attempt = models.IntegerField(default=7)
     active = models.BooleanField(default=True, editable=False)
-    created_at = models.DateTimeField(auto_now_add=True, editable=False)
-    update_at = models.DateTimeField(auto_now_add=True, editable=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(default=timezone.now, editable=False)
 
     def __str__(self):
         return self.user_name
