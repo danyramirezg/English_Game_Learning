@@ -1,0 +1,14 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block extra_head %}
+{% endblock extra_head %}
+{% block content %}
+    <h1> Login </h1>
+    <hr>
+    <form method=post novalidate>
+        {% csrf_token %}
+        {{ form }}
+        <hr>
+        <input type="submit" value="submit">
+    </form>
+{% endblock %}
