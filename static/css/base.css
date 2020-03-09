@@ -31,6 +31,13 @@ input {
   background: #f1f1f1;
 }
 
+h3 {
+	position: fixed;
+	left: 10px;
+	top: 50px;
+	color: black;
+}
+
 /* Overwrite default styles of hr */
 hr {
   border: 1px solid #4CAF50;
@@ -42,16 +49,25 @@ h1, label {
 	text-align: center;
 }
 
-/* Set a style for the submit button */
 button {
   background-color: #4CAF50;
   color: white;
   padding: 16px 20px;
   margin: 8px 0;
-  border: none;
   cursor: pointer;
+  border: none;
+}
+
+/* Set a style for the submit button */
+.formbtn {
   width: 100%;
   opacity: 0.9;
+}
+
+.logoutbtn {
+	position: fixed;
+	right: 10px;
+	top: 50px;
 }
 
 button:hover {
