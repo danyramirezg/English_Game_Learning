@@ -1,23 +1,40 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block extra_head %}
+	<link rel="stylesheet" href="{% static 'css/register.css' %}">
 {% endblock extra_head %}
 {% block content %}
-			<div id="home" class="home">
-				<a title="Home" href="./login.html"><img id="imgHome" src="{% static 'images/home.png' %}" alt="home" /></a>
+	<div class=panel>
+		<div class="form">
+			<form method="post" autocomplete="on" novalidate>
+				{% csrf_token %}
+				{{ form.non_field_errors  }}
+				<div class="wrapper">
+					{{ form.user_name.errors }}
+					<input name="user_name" id="user_name" type="text" placeholder="Enter Username" autofocus="">
+				</div>
+				<div class="wrapper">
+					{{ form.password.errors }}
+					<input name="password" id="pwd" type="password" placeholder="Enter Password">
+				</div>
+				<div class="wrapper">
+					{{ form.confirm_password.errors }}
+                	<input name="confirm_password" id="pwd" type="password" placeholder="Confirm Password">
+				</div>
+				<div class="wrapper">
+					{{ form.email.errors }}
+					<input name="email" id="email" type="email" placeholder="Enter Email">
+				</div>
+				<div class="wrapper">
+					{{ form.cell_phone.errors }}
+					<input name="cell_phone" id="phone" type="text" placeholder="Enter CellPhone">
+				</div>
+				<div class="wrapper">
+					{{ form.word_attempt.errors }}
+					<input name="word_attempt" id="word" type="number" placeholder="Enter Word Attempts" value=7>
+				</div>
+				<input type="submit" class="btnRegister" value="Register">
+			</form>
 		</div>
-    	<div id="cuerpo" class="divRegister">
-            <div id="cabecera">
-				<img id="login" src="{% static 'images/register.png' %}" >
-            </div>
-            <div id="formulario">
-                <form id="form-login" action="" method="post" autocomplete="off">
-                    <input name="username" type="text" id="username" placeholder="Enter Username" autofocus="" required="" class="inputText">
-                    <input name="password" type="password" id="password" placeholder="Enter Password" required="" class="inputText">
-					<input name="email" type="email" id="email" placeholder="Enter Email" required="" class="inputText">
-					<input name="cellphone" type="tel" id="cellphone" placeholder="Enter CellPhone" required="" class="inputText">
-					<p id="bot"><input type="submit" id="btnRegister" name="btnLogin" value="Register" class="button"></p>
-				</form>
-            </div>
-		</div>
+	</div>
 {% endblock %}
