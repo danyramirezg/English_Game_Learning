@@ -7,7 +7,8 @@ from django.contrib.auth import authenticate
 class UserForm(ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
     confirm_password = forms.CharField(widget=forms.PasswordInput)
-
+    email = forms.EmailField(max_length=50)
+    word_attempt = forms.IntegerField(min_value=1, initial=7)
 
     class Meta:
         model = User
