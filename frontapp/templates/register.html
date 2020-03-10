@@ -1,25 +1,21 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block extra_head %}
+	<link rel="stylesheet" href="{% static 'css/register.css' %}">
 {% endblock extra_head %}
 {% block content %}
-    	<div id="cuerpo" class="divRegister">
-            <div id="cabecera">
-				<img id="login" src="{% static 'images/register.png' %}" >
-            </div>
-            <div id="formulario">
-                <form id="form-login" action="" method="post" autocomplete="on" novalidate>
-
-					{% csrf_token %}
-					
-                    <input name="user_name" type="text" id="username" placeholder="Enter Username" autofocus="" required="" class="inputText">
-                    <input name="password" type="password" id="password" placeholder="Enter Password" required="" class="inputText">
-                    <input name="confirm_password" type="password" id="password" placeholder="Confirm Password" required="" class="inputText">
-					<input type="number" id="quantity" name="word_attempt" min="1">
-					<input name="email" type="email" id="email" placeholder="Enter Email" required="" class="inputText">
-					<input name="cell_phone" type="tel" id="cellphone" placeholder="Enter CellPhone" required="" class="inputText">
-					<p id="bot"><input type="submit" id="btnRegister" name="btnLogin" value="Register" class="button"></p>
-				</form>
-            </div>
+	<div class=panel>
+		<div class="form">
+			<form method="post" autocomplete="on" novalidate>
+				{% csrf_token %}
+				<input name="user_name" id="user_name" type="text" placeholder="Enter Username" autofocus="">
+                <input name="password" id="pwd" type="password" placeholder="Enter Password">
+                <input name="confirm_password" id="pwd" type="password" placeholder="Confirm Password">
+				<input name="email" id="email" type="email" placeholder="Enter Email">
+				<input name="cell_phone" id="phone" type="text" placeholder="Enter CellPhone">
+				<input name=word_attempt"" id="word" type="number" placeholder="Enter Word Attempts">
+				<input type="submit" class="btnRegister" value="Register">
+			</form>
 		</div>
+	</div>
 {% endblock %}
