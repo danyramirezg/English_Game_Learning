@@ -47,3 +47,7 @@ input#phone{
 .btnRegister {
 	width: 100%;
 }
+
+.errorlist {
+	color: red;
+}

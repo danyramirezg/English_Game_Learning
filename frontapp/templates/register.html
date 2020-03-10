@@ -8,12 +8,31 @@
 		<div class="form">
 			<form method="post" autocomplete="on" novalidate>
 				{% csrf_token %}
-				<input name="user_name" id="user_name" type="text" placeholder="Enter Username" autofocus="">
-                <input name="password" id="pwd" type="password" placeholder="Enter Password">
-                <input name="confirm_password" id="pwd" type="password" placeholder="Confirm Password">
-				<input name="email" id="email" type="email" placeholder="Enter Email">
-				<input name="cell_phone" id="phone" type="text" placeholder="Enter CellPhone">
-				<input name=word_attempt"" id="word" type="number" placeholder="Enter Word Attempts">
+				{{ form.non_field_errors  }}
+				<div class="wrapper">
+					{{ form.user_name.errors }}
+					<input name="user_name" id="user_name" type="text" placeholder="Enter Username" autofocus="">
+				</div>
+				<div class="wrapper">
+					{{ form.password.errors }}
+					<input name="password" id="pwd" type="password" placeholder="Enter Password">
+				</div>
+				<div class="wrapper">
+					{{ form.confirm_password.errors }}
+                	<input name="confirm_password" id="pwd" type="password" placeholder="Confirm Password">
+				</div>
+				<div class="wrapper">
+					{{ form.email.errors }}
+					<input name="email" id="email" type="email" placeholder="Enter Email">
+				</div>
+				<div class="wrapper">
+					{{ form.cell_phone.errors }}
+					<input name="cell_phone" id="phone" type="text" placeholder="Enter CellPhone">
+				</div>
+				<div class="wrapper">
+					{{ form.word_attempt.errors }}
+					<input name="word_attempt" id="word" type="number" placeholder="Enter Word Attempts" value=7>
+				</div>
 				<input type="submit" class="btnRegister" value="Register">
 			</form>
 		</div>
