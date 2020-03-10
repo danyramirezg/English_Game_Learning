@@ -5,24 +5,27 @@
 {% endblock %}
 {% block extra_head %}
 	<script src="{% static 'js/home.js' %}"></script>
+	<link rel="stylesheet" href="{% static 'css/landing.css' %}">
 {% endblock extra_head %}
 {% block content %}
-	<div>
-		<p id="bot">
-		<button onclick="window.location='http://localhost:8000/snake'" id="btnRegister" name="btnPlay" class="button">
-			Play
-		</p>
-	</div>
-	<div>
-		<p id="bot">
-		<button onclick="window.location='http://localhost:8000/login'" id="btnRegister" name="btnLogin" class="button">
-			Login
-		</p>
-	</div>
-	<div>
-		<p id="bot">
-		<button onclick="window.location='http://localhost:8000/register'" id="btnRegister" name="btnRegister" class="button">
-			Register
-		</p>
+	<div class="landing_buttons">
+		<div>
+			<p>
+			<button onclick="window.location='http://localhost:8000/snake'">
+				Play
+			</p>
+		</div>
+		<div>
+			<p>
+			<button onclick="window.location='http://localhost:8000/login'">
+				Login
+			</p>
+		</div>
+		<div>
+			<p>
+			<button onclick="window.location='http://localhost:8000/register'">
+				Register
+			</p>
+		</div>
 	</div>
 {% endblock %}
