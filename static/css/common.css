@@ -1,0 +1,128 @@
+body {
+	background-image: url(images/Fondo-juego.png);
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #66999;
+}
+#home{
+	text-align: right;
+}
+#cuerpo{
+    background:rgba(15,15,15,0.5);
+    padding: 0px 5px 0px 9px;
+    text-align: left;
+    margin: 100px auto;
+}
+img#imgHome{
+	height: 25px;
+    width: 25px;
+}
+.divLogin{
+	width: 410px;
+    height: 340px;
+}
+.divRegister{
+	width: 410px;
+    height: 420px;
+}
+#cabecera{
+    padding: 0px 9px 0px 9px;
+    text-align: center;
+}
+img#login{
+    height: 90px;
+    width: 90px;
+    text-align: center;
+    margin: -50px 0 12px 0;
+    position: relative;
+    border-radius: 50%;
+}
+.inputText{
+    padding-left: 45px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    margin: 0 0 25px;
+    overflow: hidden;
+    height: 50px;
+    width: 400px;
+}
+input#username{
+    background:#ffc url(./images/user.png) no-repeat left center;
+	background-size: 30px 30px;
+}
+ 
+input#password{
+    background:#ffc url(./images/password.png) no-repeat left center;
+	background-size: 30px 30px;
+}
+input#email{
+    background:#ffc url(./images/email.png) no-repeat left center;
+	background-size: 30px 30px;
+}
+input#cellphone{
+    background:#ffc url(./images/cellPhone.png) no-repeat left center;
+	background-size: 30px 30px;
+}
+.button{
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    font-family: Impact;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    border-radius: 3px;
+}
+button#btnRegister{
+	background-color: rgba(92,92,92,0.5);
+	height: 50px;
+    width: 200px;
+}
+input#btnLogin{
+	background-color: rgba(51,144,255,0.5);
+	height: 50px;
+    width: 200px;
+}
+input#btnRegister{
+	background-color: rgba(51,144,255,0.5);
+	height: 50px;
+    width: 400px;
+}
+form,p{
+    margin:0;
+}
+ 
+p{
+    padding-bottom: 5px;
+}
+p#remember{
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+}
+.container {
+    padding: 16px;
+}
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+a#forgot{
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
