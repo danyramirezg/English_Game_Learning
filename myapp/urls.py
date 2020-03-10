@@ -1,6 +1,7 @@
 from django.urls import path
 from myapp.views import user, word, topic
 from myapp.views import translator
+from myapp.views import token_login
 
 urlpatterns = [
     # User endpoints
@@ -14,4 +15,5 @@ urlpatterns = [
     # path('api/pod_Words/<int:pk>/', word.word_detail),
     # translator API endpoint
     path('api/pod_words/<word>', translator.translate),
+    path('api/pod_token_login', token_login.Token_Login.as_view()),
 ]
