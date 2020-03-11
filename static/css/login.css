@@ -1,4 +1,3 @@
-
 #divBody {
     background:rgba(15,15,15,0.5); /*1 100% transparente*/
     padding: 0px 5px 0px 9px;   /*adentro*/
@@ -11,23 +10,17 @@ img#imgDivHead{
     width: 80px;
     text-align: center;
     margin: -50px 0 12px 0;
-    position: relative; 
+    position: relative;
     border-radius: 50%;
 }
 .fondBlack{
     width: 430px;
     height: 480px;
 }
-
 #headBoard{
     padding: 0px 9px 0px 9px;
     text-align: center;
 }
-
-form, p{
-    margin: 0;
-}
-
 .inputText{
     padding-left: 45px;
     font-family: sans-serif;
@@ -42,6 +35,12 @@ form, p{
     border-radius: 6px;
 }
 
+#remember{
+    color: #0000EE;
+    size:
+
+}
+
 input#user_name{
     background: #ffc url(../images/user.png) no-repeat left center;
     background-size: 30px 30px;
@@ -50,37 +49,4 @@ input#user_name{
 input#password, input#confirm_password{
     background: #ffc url(../images/password.png) no-repeat left center;
     background-size: 30px 30px;
-}
-
-input#email{
-    background: #ffc url(../images/email.png) no-repeat left center;
-    background-size: 30px 30px;
-}
-
-input#phone{
-    background: #ffc url(../images/cellphone.png) no-repeat left center;
-    background-size: 30px 30px;
-}
-
-input#word{
-    background: #ffc url(../images/word.png) no-repeat left center;
-    background-size: 30px 30px;
-}
-
-.button{
-    border: none;
-    color: white;
-    padding-left: 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 15px;
-    margin: 0 0 25px;
-    cursor: pointer;
-    transition-duration: 0.4s;
-    font-family: Impact;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-    border-radius: 5px;
-    background-color: rgba(51, 144, 255, 0.5);
-    height: 40px;
-    width: 352px;
 }

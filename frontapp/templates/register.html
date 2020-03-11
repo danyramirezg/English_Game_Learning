@@ -9,9 +9,9 @@
 			<img id="imgDivHead" src="{% static 'images/register.png' %}">
 		</div>
 		<div id="form" class="form">
-			<form id="form-register" method="post" autocomplete="off" novalidate>
+			<form id="form-register" method="post" autocomplete="off">
 				{% csrf_token %}
-				<input class="inputText" name="user_name" id="user_name" type="text" placeholder="Enter Username" autofocus="" required>
+				<input class="inputText" name="user_name" id="user_name" type="text" placeholder="Enter Username" autofocus="" required="">
 				<input class="inputText" name="pwd" id="password" type="password" placeholder="Enter Password" autofocus="">
 				<input class="inputText" name="confirm_pwd" id="confirm_password" type="password" placeholder="Confirm Password" autofocus="">
 				<input class="inputText" name="email" id="email" type="email" placeholder="Enter Email" autofocus="">
