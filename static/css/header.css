@@ -1,3 +1,8 @@
 .home {
 	text-align: right;
 }
+
+img#imgHome{
+	width: 40px;
+	height: 40px;
+}
