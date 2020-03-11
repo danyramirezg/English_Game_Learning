@@ -2,6 +2,7 @@ from django.forms import ModelForm
 from django import forms
 from myapp.models.user import User
 from django.contrib.auth import authenticate
+from myapp.models.user import Custom_User
 
 
 class UserForm(ModelForm):
@@ -12,11 +13,12 @@ class UserForm(ModelForm):
 
     class Meta:
         model = User
-        fields = ['user_name', 'cell_phone', 'email', 'word_attempt', 'password']
+        fields = ['user_name', 'cell_phone', 'email', 'word_attempt',
+                  'password']
 
     def clean(self):
         cleaned_data = super(UserForm, self).clean()
-        
+
         password = cleaned_data.get("password")
         confirm_password = cleaned_data.get("confirm_password")
 
@@ -24,16 +26,26 @@ class UserForm(ModelForm):
 
         if password != confirm_password:
             raise forms.ValidationError(
-                    "passwords do not match"
-                    )
+                "passwords do not match"
+            )
+
 
 class LoginForm(forms.Form):
     user_name = forms.CharField(label="User name", max_length=60)
-    password = forms.CharField(label="Password", widget=forms.PasswordInput, max_length=50)
+    password = forms.CharField(label="Password", widget=forms.PasswordInput,
+                               max_length=50)
 
     def clean(self):
         user_name = self.cleaned_data.get('user_name')
         password = self.cleaned_data.get('password')
         user = User.objects.filter(user_name=user_name)
-        if not user.exists() or user.get(user_name=user_name).password != password:
+        if not user.exists() or user.get(
+                user_name=user_name).password != password:
             raise forms.ValidationError("username or password wrong")
+
+
+class Custom_User_Form(forms.ModelForm):
+    class Meta:
+        model = Custom_User
+        fields = ('cell_phone', 'word_attempt', 'created_at',
+                  'update_at')

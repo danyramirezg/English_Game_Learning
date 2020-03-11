@@ -8,12 +8,6 @@ from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
 
 
-# @api_view(['POST'])
-# def token_login():
-#     return Response()
-#     return Response(res.json(), status=status.HTTP_200_OK)
-
-
 class Token_Login(ObtainAuthToken):
 
     def post(self, request, *args, **kwargs):

@@ -3,6 +3,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from myapp.models.user import User
 from myapp.serializers.user import UserSerializer
+from frontapp.forms import Custom_User_Form
 
 
 @api_view(['GET', 'POST'])
@@ -16,6 +17,7 @@ def user_list(request):
         return Response(serializer.data)
 
     elif request.method == 'POST':
+
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
