@@ -27,11 +27,6 @@ class UserForm(ModelForm):
                     "passwords do not match"
                     )
 
-        # test if user already exists
-        user_name = cleaned_data.get("user_name")
-        if User.objects.filter(user_name=user_name).exists():
-            raise forms.ValidationError("User name {} already exists".format(user_name))
-
 class LoginForm(forms.Form):
     user_name = forms.CharField(label="User name", max_length=60)
     password = forms.CharField(label="Password", widget=forms.PasswordInput, max_length=50)
