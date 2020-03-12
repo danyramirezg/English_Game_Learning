@@ -585,11 +585,6 @@ window.onload = function() {
                     snake.direction = 2;
                 }
             }
-            
-            // Grow for demonstration purposes
-            if (e.keyCode == 32) {
-                snake.grow();
-            }
         }
     }
     
