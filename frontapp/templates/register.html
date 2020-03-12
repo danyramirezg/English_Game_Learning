@@ -4,7 +4,7 @@
 	<link rel="stylesheet" href="{% static 'css/register.css' %}">
 {% endblock extra_head %}
 {% block content %}
-	<div class="fondBlack" id="divBody">
+	<div class="fondBlackRegister" id="divBody">
 		<div id="headBoard">
 			<img id="imgDivHead" src="{% static 'images/register.png' %}">
 		</div>
@@ -12,10 +12,10 @@
 			<form id="form-register" method="post" autocomplete="off">
 				{% csrf_token %}
 				<input class="inputText" name="user_name" id="user_name" type="text" placeholder="Enter Username" autofocus="" required="">
-				<input class="inputText" name="password" id="password" type="password" placeholder="Enter Password" autofocus="">
-				<input class="inputText" name="confirm_password" id="confirm_password" type="password" placeholder="Confirm Password" autofocus="">
-				<input class="inputText" name="email" id="email" type="email" placeholder="Enter Email" autofocus="">
-				<input class="inputText" name="cell_phone" id="phone" type="tel" placeholder="Enter CellPhone" autofocus="" required>
+				<input class="inputText" name="password" id="password" type="password" placeholder="Enter Password" autofocus="" required="">
+				<input class="inputText" name="confirm_password" id="confirm_password" type="password" placeholder="Confirm Password" autofocus="" required="">
+				<input class="inputText" name="email" id="email" type="email" placeholder="Enter Email" autofocus="" required="">
+				<input class="inputText" name="cell_phone" id="phone" type="tel" placeholder="Enter CellPhone" autofocus="">
 				<input class="inputText" name="word_attempt" id="word" type="number" placeholder="Enter Word Attempts" value=7  autofocus="">
 				<p id="bot"><input type="submit" id="btnRegister" class="button" value="Register">
 			</form>

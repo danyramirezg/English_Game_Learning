@@ -1,13 +1,18 @@
 /******************************************************************
-*******				Logo-casita para ir a Home					*******
+*******				Borde rojo del juego					*******
 *******************************************************************/
-.home {
-	text-align: right;
+canvas{
+    border: 5px double rgba(148, 5, 5, 0.5);
 }
+
 /******************************************************************
-*******				tamaño de la casita	  				    *******
+*******				fondo gris del snake					*******
 *******************************************************************/
-img#imgHome{
-	width: 40px;
-	height: 40px;
+.fondBlackSnake{
+    width: 700px;
+    height: 540px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
 }
+

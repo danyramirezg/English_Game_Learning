@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block extra_head %}
-<script src="{% static 'js/snake.js' %}"></script>
+	<link rel="stylesheet" href="{% static 'css/snake.css' %}">
+	<script src="{% static 'js/snake.js' %}"></script>
 {% endblock extra_head %}
 {% block content %}
-	<canvas id="viewport" width="640" height="480"></canvas>
+	<div class="fondBlackSnake" id="divBody">
+		<canvas id="viewport" width="640" height="480"></canvas>
+	</div>
 {% endblock %}
