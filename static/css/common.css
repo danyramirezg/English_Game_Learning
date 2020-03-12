@@ -1,7 +1,75 @@
+/******************************************************************
+*******				fondo de pantalla						*******
+*******************************************************************/
 body {
 	background-image: url(../images/Fondo-juego.png);
 	background-position: center center;
 	background-attachment: fixed;
 	background-size: cover;
 	background-color: #FFFFFF;
+	margin: 0 0 0 0;
+	justify-content: center;  /*todo el contenido centrado*/
+}
+
+/******************************************************************
+*******				contenedor "div" fondo negro			*******
+*******************************************************************/
+#divBody {
+    background:rgba(15,15,15,0.5); /*1 100% transparente*/
+    padding: 0px 5px 0px 9px;   /*adentro*/
+    /*text-align: center;*/
+    margin: 30px auto; /*afuera*/
+    border-radius: 8px;
+}
+
+/******************************************************************
+*******				Definicion de campo texto				*******
+*******************************************************************/
+.inputText{
+    padding-left: 45px;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    margin: 0 0 25px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+/******************************************************************
+*******				Definicion botones						*******
+*******************************************************************/
+.button{
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; /*los botones en linea y al lado*/
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; /*sobre el boton el cursor*/
+    transition-duration: 0.4s;
+    font-family: Impact;   /*Tipo de letra*/
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    border-radius: 5px;
+}
+
+/******************************************************************
+*******				imagen del head del contenedor			*******
+*******************************************************************/
+img#imgDivHead{
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    margin: -50px 0 12px 0;
+    position: relative; 
+    border-radius: 50%;
+}
+
+/******************************************************************
+*******				div de la imagen del formulario			*******
+*******************************************************************/
+#headBoard{
+    padding: 0px 9px 0px 9px;
+    text-align: center;
 }

@@ -430,20 +430,20 @@ window.onload = function() {
                 var tilex = i*level.tilewidth;
                 var tiley = j*level.tileheight;
                 
-                // Draw tiles based on their type
+                // Draw tiles based on their type marco
                 if (tile == 0) {
-                    // Empty space
-                    context.fillStyle = "#f7e697";
+                    // Empty space centro
+                    context.fillStyle = "#6296F7"; 
                     context.fillRect(tilex, tiley, level.tilewidth, level.tileheight);
                 } else if (tile == 1) {
-                    // Wall
-                    context.fillStyle = "#bcae76";
+                    // Wall marco 
+                    context.fillStyle = "#5D5D5D";
                     context.fillRect(tilex, tiley, level.tilewidth, level.tileheight);
                 } else if (tile == 2) {
                     // Apple
                     
-                    // Draw apple background
-                    context.fillStyle = "#f7e697";
+                    // Draw apple background manzana
+                    context.fillStyle = "#6296F7";
                     context.fillRect(tilex, tiley, level.tilewidth, level.tileheight);
                     
                     // Draw the apple image

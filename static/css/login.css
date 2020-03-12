@@ -1,52 +1,73 @@
-#divBody {
-    background:rgba(15,15,15,0.5); /*1 100% transparente*/
-    padding: 0px 5px 0px 9px;   /*adentro*/
-    text-align: center;
-    margin: 50px auto; /*afuera*/
-    border-radius: 8px;
+/******************************************************************
+*******				tamaño contenedor negro					*******
+*******************************************************************/
+.fondBlackLogin{
+    width: 425px;
+    height: 350px;
+    text-align: left;
 }
-img#imgDivHead{
-    height: 80px;
-    width: 80px;
-    text-align: center;
-    margin: -50px 0 12px 0;
-    position: relative;
-    border-radius: 50%;
-}
-.fondBlack{
-    width: 430px;
-    height: 480px;
-}
-#headBoard{
-    padding: 0px 9px 0px 9px;
-    text-align: center;
-}
-.inputText{
-    padding-left: 45px;
-    font-family: sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    color: #000000;
-    margin: 0 0 25px;
-    overflow: hidden;
-    /*text-align: center;*/
+
+/******************************************************************
+*******				cuadro texto username y la imagen				*******
+*******************************************************************/
+input#username{
+    background:#ffc url(../images/user.png) no-repeat left center;
+    background-size: 25px 25px;
+    width: 370px;
     height: 30px;
-    width: 300px;
-    border-radius: 6px;
 }
 
-#remember{
-    color: #0000EE;
-    size:
-
-}
-
-input#user_name{
-    background: #ffc url(../images/user.png) no-repeat left center;
-    background-size: 30px 30px;
-}
-
-input#password, input#confirm_password{
+/******************************************************************
+*******				cuadro texto password y la imagen		*******
+*******************************************************************/
+input#password{
     background: #ffc url(../images/password.png) no-repeat left center;
     background-size: 30px 30px;
+    width: 370px;
+    height: 30px;
+}
+
+/******************************************************************
+*******				botton register					        *******
+*******************************************************************/
+button#btnRegister{
+    background-color: rgba(92, 92, 92, 0.5);
+    width: 200px;
+    height: 50px;
+}
+/*.postLeft{
+    float: left; pegado a la Izquierda
+}*/
+
+/******************************************************************
+*******				input Boton login					    *******
+*******************************************************************/
+button#btnLogin{
+    background-color: rgba(51, 144, 255, 0.5);
+    width: 200px;
+    height: 50px;
+}
+/*.postRigth{
+    float: right; pegado a la derecha
+}*/
+
+/******************************************************************
+*******		    letra mensaje remember y forgot      	    *******
+*******************************************************************/
+p#remember, a#forgot{
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+/******************************************************************
+*******								*******
+*******************************************************************/
+.container{
+    padding: 16px;
+}
+
+a#forgot{
+    float: right;
+    padding-top: 8px;
 }
