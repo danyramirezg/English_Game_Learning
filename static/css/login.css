@@ -13,7 +13,7 @@
 input#username{
     background:#ffc url(../images/user.png) no-repeat left center;
     background-size: 25px 25px;
-    width: 370px;
+    width: 280px;
     height: 30px;
 }
 
@@ -23,7 +23,7 @@ input#username{
 input#password{
     background: #ffc url(../images/password.png) no-repeat left center;
     background-size: 30px 30px;
-    width: 370px;
+    width: 280px;
     height: 30px;
 }
 
@@ -35,9 +35,7 @@ button#btnRegister{
     width: 200px;
     height: 50px;
 }
-/*.postLeft{
-    float: left; pegado a la Izquierda
-}*/
+
 
 /******************************************************************
 *******				input Boton login					    *******
@@ -47,9 +45,6 @@ button#btnLogin{
     width: 200px;
     height: 50px;
 }
-/*.postRigth{
-    float: right; pegado a la derecha
-}*/
 
 /******************************************************************
 *******		    letra mensaje remember y forgot      	    *******
@@ -70,4 +65,7 @@ p#remember, a#forgot{
 a#forgot{
     float: right;
     padding-top: 8px;
+}
+.textCenter{
+    text-align: center;
 }
