@@ -23,7 +23,32 @@ window.onload = function() {
     // Get the canvas and context
     var canvas = document.getElementById("viewport"); 
     var context = canvas.getContext("2d");
-    
+	var input = $(".inputText");
+	var topic = $('.topic').text("Proffesions");
+	var left = $('.left');
+	var right = $('.right');
+	var down = $('.down');
+	var up = $('.up');
+
+	var words = {
+		'nurse': 'enfermera',
+		'lawyer': 'abogado',
+		'fireman': 'bombero',
+		'architect': 'arquitecto',
+		'programmer': 'programador',
+		'baker': 'panadero',
+		'waiter': 'mesero',
+		'teacher': 'profesor',
+		'pilot': 'piloto',
+		'secretary': 'secretaria',
+		'designer': 'disenador',
+		'author': 'autor',
+		'dentist': 'dentista',
+		'farmer': 'granjero',
+		'model': 'modelo',
+		'plumber': 'plomero'
+	}
+
     // Timing and frames per second
     var lastframe = 0;
     var fpstime = 0;
@@ -73,7 +98,7 @@ window.onload = function() {
         // Return an array of images
         return loadedimages;
     }
-    
+
     // Level properties
     var Level = function (columns, rows, tilewidth, tileheight) {
         this.columns = columns;
@@ -227,7 +252,7 @@ window.onload = function() {
     
     function newGame() {
         // Initialize the snake
-        snake.init(10, 10, 1, 10, 4);
+        snake.init(10, 10, 1, 0.5, 4);
         
         // Generate the default level
         level.generate();
@@ -240,6 +265,9 @@ window.onload = function() {
         
         // Initialize variables
         gameover = false;
+
+		// set random words
+		setWords();
     }
     
     // Add an apple to the level at an empty position
@@ -325,6 +353,31 @@ window.onload = function() {
     }
     
     function updateGame(dt) {
+		input.on('keyup', function(e){
+			if (e.keyCode === 13) {
+				/*console.log('input text: ' + input.text())
+				console.log('translation: ' + words[up.text()])*/
+				if (input.val() === words[up.text()]) {
+					if (snake.direction != 2)  {
+            			snake.direction = 0;
+               	 	}
+				} else if (input.val() === words[down.text()]) {
+                	if (snake.direction != 0)  {
+                    	snake.direction = 2;
+                	}
+				} else if (input.val() === words[left.text()]) {
+                	if (snake.direction != 1)  {
+                    	snake.direction = 3;
+                	}
+				} else if (input.val() === words[right.text()]) {
+                	if (snake.direction != 3)  {
+                    	snake.direction = 1;
+                	}
+				}
+				input.val("");
+				setWords();
+			}
+		});
         // Move the snake
         if (snake.tryMove(dt)) {
             // Check snake collisions
@@ -558,38 +611,24 @@ window.onload = function() {
             snake.direction = (snake.direction + 1) % snake.directions.length;
         }
     }
-    
+
+	function randomWord(obj) {
+        var keys = Object.keys(obj);
+        return keys[keys.length * Math.random() << 0];
+    }
+
+	function setWords() {
+		left.text(randomWord(words));
+		right.text(randomWord(words));
+		down.text(randomWord(words));
+		up.text(randomWord(words));
+	}
+
     // Keyboard event handler
     function onKeyDown(e) {
         if (gameover) {
             tryNewGame();
         } else {
-            if (e.keyCode == 37 || e.keyCode == 65) {
-                // Left or A
-                if (snake.direction != 1)  {
-                    snake.direction = 3;
-                }
-            } else if (e.keyCode == 38 || e.keyCode == 87) {
-                // Up or W
-                if (snake.direction != 2)  {
-                    snake.direction = 0;
-                }
-            } else if (e.keyCode == 39 || e.keyCode == 68) {
-                // Right or D
-                if (snake.direction != 3)  {
-                    snake.direction = 1;
-                }
-            } else if (e.keyCode == 40 || e.keyCode == 83) {
-                // Down or S
-                if (snake.direction != 0)  {
-                    snake.direction = 2;
-                }
-            }
-            
-            // Grow for demonstration purposes
-            if (e.keyCode == 32) {
-                snake.grow();
-            }
         }
     }
     

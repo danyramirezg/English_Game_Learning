@@ -6,17 +6,41 @@
 {% endblock extra_head %}
 {% block content %}
 	<div class="container">
-		<div class="fondBlackSnake" id="divBody">
+		<div class="game">
 			<canvas id="viewport" width="640" height="480"></canvas>
 		</div>
-		<div class=arrowsPlay>
-			<form id="form-arrowsPlay" method="post" autocomplete="off">
-				{% csrf_token %}
-				<input class="inputText" name="turnRight" id="turnRight" type="text" placeholder="turn Right" autofocus="">
-				<input class="inputText" name="turnLight" id="turnLight" type="text" placeholder="turn Left" autofocus="">
-				<input class="inputText" name="turnDown" id="turnDown" type="text" placeholder="turn Down" autofocus="" >
-				<input class="inputText" name="turnUp" id="turnUp" type="text" placeholder="turn Up" autofocus="" >
-			</form>
+		<div class="words">
+			<div>
+				<p>Topic</p>
+				<p class="topic">
+
+				</p>
+			</div>
+			<div>
+				<p>Move Left:</p>
+				<p class="left">
+					
+				</p>
+			</div>
+			<div>
+				<p>Move Right:</p>
+				<p class="right">
+					
+				</p>
+			</div>
+			<div>
+				<p>Move Up:</p>
+				<p class="up">
+					
+				</p>
+			</div>
+			<div>
+				<p>Move Down:</p>
+				<p class="down">
+					
+				</p>
+			</div>
 		</div>
+		<input type="text" class="inputText" autofocus>
 	</div>
 {% endblock %}
