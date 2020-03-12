@@ -1,4 +1,4 @@
-/******************************************************************
+i/******************************************************************
 *******				Borde rojo del juego					*******
 *******************************************************************/
 canvas{
@@ -8,7 +8,7 @@ canvas{
 /******************************************************************
 *******				fondo gris del snake					*******
 *******************************************************************/
-.fondBlackSnake{
+.game{
     width: 700px;
     height: 540px;
     display: flex; 
@@ -17,21 +17,26 @@ canvas{
 }
 
 .container{
-    display: flex;
-    width: 1280px;
-    height: 540px;
+	display: flex;
+	justify-content: left;
     /*background-color: saddlebrown;*/
-}
-
-#form-arrowsPlay{
-    display: block;
-    float: right;
-    /*background-color: rgb(50, 50, 146);*/
-    text-align: center;
 }
 
 .inputText{
     width: 90px;
     height: 30px;
+}
+
+p {
+	font-size: 22px;
+	color: red;
+}
+
+.topic {
+	color: white;
+}
+
+.left, .right, .up, .down {
+	color: white;
 }
 
