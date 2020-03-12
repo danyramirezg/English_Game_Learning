@@ -16,3 +16,22 @@ canvas{
     align-items: center;
 }
 
+.container{
+    display: flex;
+    width: 1280px;
+    height: 540px;
+    /*background-color: saddlebrown;*/
+}
+
+#form-arrowsPlay{
+    display: block;
+    float: right;
+    /*background-color: rgb(50, 50, 146);*/
+    text-align: center;
+}
+
+.inputText{
+    width: 90px;
+    height: 30px;
+}
+

@@ -2,8 +2,8 @@
 *******				tamaño contenedor negro					*******
 *******************************************************************/
 .fondBlackLogin{
-    width: 430px;
-    height: 390px;
+    width: 425px;
+    height: 350px;
     text-align: left;
 }
 
@@ -35,21 +35,21 @@ button#btnRegister{
     width: 200px;
     height: 50px;
 }
-.postLeft{
-    float: left; /*pegado a la Izquierda*/
-}
+/*.postLeft{
+    float: left; pegado a la Izquierda
+}*/
 
 /******************************************************************
 *******				input Boton login					    *******
 *******************************************************************/
-input#btnLogin{
+button#btnLogin{
     background-color: rgba(51, 144, 255, 0.5);
     width: 200px;
     height: 50px;
 }
-.postRigth{
-    float: right; /*pegado a la derecha*/
-}
+/*.postRigth{
+    float: right; pegado a la derecha
+}*/
 
 /******************************************************************
 *******		    letra mensaje remember y forgot      	    *******
@@ -69,5 +69,5 @@ p#remember, a#forgot{
 
 a#forgot{
     float: right;
-    padding-top: 16px;
+    padding-top: 8px;
 }
