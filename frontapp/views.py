@@ -14,6 +14,7 @@ def get_authenticated_id(request):
     except KeyError:
         return None
 
+
 def landing(request):
     if request.user.is_authenticated:
         print("Authentication working")
@@ -34,7 +35,7 @@ def login(request):
         if form.is_valid():
             user_name = form.cleaned_data.get('user_name')
             password = form.cleaned_data.get('password')
-            user = authenticate(user_name = user_name, password = password)
+            user = authenticate(user_name=user_name, password=password)
             if user is not None:
                 login(request, user)
             return redirect('landing')
@@ -49,7 +50,8 @@ def register(request):
     if request.method == 'POST':
         form = UserForm(request.POST)
         if form.is_valid():
-            post('http://localhost:8000/api/pod_users/', data=form.cleaned_data)
+            post('http://localhost:8000/api/pod_users/',
+                 data=form.cleaned_data)
             return redirect('landing')
     else:
         form = UserForm()
@@ -69,3 +71,14 @@ def snake(request):
 
 def root(request):
     return redirect('landing')
+
+
+def topic(request):
+    user_name = None
+    user_id = get_authenticated_id(request)
+
+    if user_id:
+        user_name = User.objects.get(pk=user_id)
+
+    return render(request, 'topic.html', {'user': user_name})
+
