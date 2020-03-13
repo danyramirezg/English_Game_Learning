@@ -6,29 +6,11 @@ from myapp.models.user import User
 from requests import post
 
 
-# Create your views here.
-def get_authenticated_id(request):
-    try:
-        user_id = request.session.get('user_id')
-        return user_id
-    except KeyError:
-        return None
-
 def landing(request):
-    if request.user.is_authenticated:
-        print("Authentication working")
-    user_name = None
-    user_id = get_authenticated_id(request)
-
-    if user_id:
-        user_name = User.objects.get(pk=user_id)
-
-    return render(request, 'landing.html', {'user': user_name})
+    return render(request, 'landing.html')
 
 
 def login(request):
-    if 'user_id' in request.session.keys():
-        return redirect('landing')
     if request.method == 'POST':
         form = LoginForm(request.POST)
         if form.is_valid():
@@ -44,8 +26,6 @@ def login(request):
 
 
 def register(request):
-    if 'user_id' in request.session.keys():
-        return redirect('landing')
     if request.method == 'POST':
         form = UserForm(request.POST)
         if form.is_valid():
@@ -53,18 +33,11 @@ def register(request):
             return redirect('landing')
     else:
         form = UserForm()
-
     return render(request, 'register.html', {'form': form})
 
 
 def snake(request):
-    user_name = None
-    user_id = get_authenticated_id(request)
-
-    if user_id:
-        user_name = User.objects.get(pk=user_id)
-
-    return render(request, 'snake.html', {'user': user_name})
+    return render(request, 'snake.html')
 
 
 def root(request):
