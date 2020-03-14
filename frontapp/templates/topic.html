@@ -14,9 +14,11 @@
 			{% if topics %}
 				{% for topic in topics %}
 					<div>
-						<button onclick="window.location='http://localhost:8000/snake'">
-							{{ topic.topic_name }}
-						</button>
+						<a href="{% url 'snake' %}?id={{ topic.id }}">
+							<button>
+								{{ topic.topic_name }}
+							</button>
+						</a>
 					</div>
 				{% endfor %}
 			{% else %}
