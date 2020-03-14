@@ -81,4 +81,3 @@ def topic(request):
         user_name = User.objects.get(pk=user_id)
 
     return render(request, 'topic.html', {'user': user_name})
-
