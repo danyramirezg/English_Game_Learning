@@ -46,7 +46,15 @@ window.onload = function() {
       dentist: "dentista",
       farmer: "granjero",
       model: "modelo",
-      plumber: "plomero"
+      plumber: "plomero",
+      accountant: "contador",
+      actor: "actor",
+      actress: "actriz",
+      air hostess: "azafata",
+      archaeologist: "arqueólogo",
+      architect: "arquitecto",
+      astronaut: "astronauta",
+      clown: "Payaso"
     };
   
     // Timing and frames per second
