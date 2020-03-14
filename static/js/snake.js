@@ -50,7 +50,7 @@ window.onload = function() {
       accountant: "contador",
       actor: "actor",
       actress: "actriz",
-      air hostess: "azafata",
+      air_hostess: "azafata",
       archaeologist: "arqueólogo",
       architect: "arquitecto",
       astronaut: "astronauta",
