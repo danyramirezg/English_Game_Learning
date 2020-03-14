@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login
 from .forms import UserForm
 from .forms import LoginForm
 from myapp.models.user import User
-from requests import post
+from requests import post, get
 
 
 def landing(request):
@@ -38,7 +38,7 @@ def register(request):
 
 
 def snake(request):
-    return render(request, 'snake.html', {'user': user_name})
+    return render(request, 'snake.html')
 
 
 def root(request):
@@ -46,4 +46,8 @@ def root(request):
 
 
 def topic(request):
-    return render(request, 'topic.html')
+    res = get('http://localhost:8000/api/pod_topic')
+    topics = {}
+    if res.status_code == 200:
+        topics = res.json()
+    return render(request, 'topic.html', {'topics': topics})
