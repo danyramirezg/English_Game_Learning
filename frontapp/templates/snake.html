@@ -1,24 +1,37 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block extra_head %}
-	<link rel="stylesheet" href="{% static 'css/register.css' %}">
+	<link rel="stylesheet" href="{% static 'css/snake.css' %}">
+	<script src="{% static 'js/snake.js' %}"></script>
 {% endblock extra_head %}
 {% block content %}
-	<div class="fondBlackRegister" id="divBody">
-		<div id="headBoard">
-			<img id="imgDivHead" src="{% static 'images/register.png' %}">
+	<div class="container">
+		<div class="game">
+			<canvas id="viewport" width="780" height="580"></canvas>
 		</div>
-		<div id="form" class="form">
-			<form id="form-register" method="post" autocomplete="off">
-				{% csrf_token %}
-				<input class="inputText" name="user_name" id="user_name" type="text" placeholder="Enter Username" autofocus="" required="">
-				<input class="inputText" name="password" id="password" type="password" placeholder="Enter Password" autofocus="" required="">
-				<input class="inputText" name="confirm_password" id="confirm_password" type="password" placeholder="Confirm Password" autofocus="" required="">
-				<input class="inputText" name="email" id="email" type="email" placeholder="Enter Email" autofocus="" required="">
-				<input class="inputText" name="cell_phone" id="phone" type="tel" placeholder="Enter CellPhone" autofocus="">
-				<input class="inputText" name="word_attempt" id="word" type="number" placeholder="Enter Word Attempts" value=7  autofocus="">
-				<p id="bot"><input type="submit" id="btnRegister" class="button" value="Register">
-			</form>
+		<div class="words">
+			<table>
+				<tr>
+					<td colspan="3">
+						<p class="title">TOPIC <b class="topic"></b></p>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input class="inputText" name="txtUp" id="txtUp" type="text" disabled></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><input class="inputText" name="txtLeft" id="txtLeft" type="text" disabled></td>
+					<td><input class="inputText" name="txtTrans" id="txtTras" type="text"></td>
+					<td><input class="inputText" name="txtRight" id="txtRight" type="text" disabled></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input class="inputText" name="txtDown" id="txtDown" type="text" disabled></td>
+					<td></td>
+				</tr>
+			</table>
 		</div>
 	</div>
 {% endblock %}
