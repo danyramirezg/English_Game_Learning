@@ -1,44 +1,24 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block extra_head %}
-	<link rel="stylesheet" href="{% static 'css/snake.css' %}">
-	<script src="{% static 'js/snake.js' %}"></script>
+	<link rel="stylesheet" href="{% static 'css/register.css' %}">
 {% endblock extra_head %}
 {% block content %}
-	<div class="container">
-		<div class="game">
-			<canvas id="viewport" width="640" height="480"></canvas>
+	<div class="fondBlackRegister" id="divBody">
+		<div id="headBoard">
+			<img id="imgDivHead" src="{% static 'images/register.png' %}">
 		</div>
-		<div class="words">
-			<div>
-				<p>Topic</p>
-				<p class="topic"></p>
-			</div>
-			<div>
-				<p>Move Left:</p>
-				<p class="left">
-					
-				</p>
-			</div>
-			<div>
-				<p>Move Right:</p>
-				<p class="right">
-					
-				</p>
-			</div>
-			<div>
-				<p>Move Up:</p>
-				<p class="up">
-					
-				</p>
-			</div>
-			<div>
-				<p>Move Down:</p>
-				<p class="down">
-					
-				</p>
-			</div>
+		<div id="form" class="form">
+			<form id="form-register" method="post" autocomplete="off">
+				{% csrf_token %}
+				<input class="inputText" name="user_name" id="user_name" type="text" placeholder="Enter Username" autofocus="" required="">
+				<input class="inputText" name="password" id="password" type="password" placeholder="Enter Password" autofocus="" required="">
+				<input class="inputText" name="confirm_password" id="confirm_password" type="password" placeholder="Confirm Password" autofocus="" required="">
+				<input class="inputText" name="email" id="email" type="email" placeholder="Enter Email" autofocus="" required="">
+				<input class="inputText" name="cell_phone" id="phone" type="tel" placeholder="Enter CellPhone" autofocus="">
+				<input class="inputText" name="word_attempt" id="word" type="number" placeholder="Enter Word Attempts" value=7  autofocus="">
+				<p id="bot"><input type="submit" id="btnRegister" class="button" value="Register">
+			</form>
 		</div>
-		<input type="text" class="inputText" autofocus>
 	</div>
 {% endblock %}
