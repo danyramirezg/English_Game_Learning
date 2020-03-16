@@ -14,8 +14,8 @@
 		</div>
 		<div id="form" class="form">
 			<form id="form-register" method="post" autocomplete="off">
-				<!--{% csrf_token %}-->
-				<input class="inputText" name="username" id="username" type="text" placeholder="Enter Username" autofocus="" required>
+				{% csrf_token %}
+				<input class="inputText" name="user_name" id="username" type="text" placeholder="Enter Username" autofocus="" required>
 				<input class="inputText" name="password" id="password" type="password" placeholder="Enter Password" autofocus="" required>
 				<input class="inputText" name="confirm_password" id="confirm_password" type="password" placeholder="Confirm Password" autofocus="" required>
 				<input class="inputText" name="email" id="email" type="email" placeholder="Enter Email" autofocus="" required>

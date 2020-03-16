@@ -11,7 +11,7 @@
 });*/
 
 function funValidateForm(){
-    funMessageObject('username', 'Username is mandatory!', '');
+    funMessageObject('user_name', 'User name is mandatory!', '');
     funMessageObject('password', 'Password is mandatory!', '');
     funMessageObject('confirm_password', 'Confirm Password is mandatory!', '');
     funMessageObject('email', 'Email is mandatory!', 'Enter a valid email address');
