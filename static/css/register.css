@@ -1,86 +1,102 @@
 
-#divBody {
-    background:rgba(15,15,15,0.5); /*1 100% transparente*/
-    padding: 0px 5px 0px 9px;   /*adentro*/
-    text-align: center;
-    margin: 50px auto; /*afuera*/
-    border-radius: 8px;
-}
-img#imgDivHead{
-    height: 80px;
-    width: 80px;
-    text-align: center;
-    margin: -50px 0 12px 0;
-    position: relative; 
-    border-radius: 50%;
-}
-.fondBlack{
+/******************************************************************
+*******				fondo del contenedor negro				*******
+*******************************************************************/
+.fondBlackRegister{
     width: 430px;
     height: 480px;
-}
-
-#headBoard{
-    padding: 0px 9px 0px 9px;
     text-align: center;
 }
 
+/******************************************************************
+*******				Borde rojo del juego					*******
+*******************************************************************/
 form, p{
     margin: 0;
 }
 
-.inputText{
-    padding-left: 45px;
-    font-family: sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    color: #000000;
-    margin: 0 0 25px;
-    overflow: hidden;
-    /*text-align: center;*/
-    height: 30px;
-    width: 300px;
-    border-radius: 6px;
-}
-
+/******************************************************************
+*******				Cajas de texto con imagen				*******
+*******************************************************************/
 input#user_name{
     background: #ffc url(../images/user.png) no-repeat left center;
     background-size: 30px 30px;
+    height: 30px;
+    width: 300px;
 }
-
 input#password, input#confirm_password{
     background: #ffc url(../images/password.png) no-repeat left center;
     background-size: 30px 30px;
+    height: 30px;
+    width: 300px;
 }
-
 input#email{
     background: #ffc url(../images/email.png) no-repeat left center;
     background-size: 30px 30px;
+    height: 30px;
+    width: 300px;
 }
-
 input#phone{
     background: #ffc url(../images/cellphone.png) no-repeat left center;
     background-size: 30px 30px;
+    height: 30px;
+    width: 300px;
 }
-
 input#word{
     background: #ffc url(../images/word.png) no-repeat left center;
     background-size: 30px 30px;
+    height: 30px;
+    width: 300px;
 }
 
-.button{
-    border: none;
-    color: white;
-    padding-left: 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 15px;
-    margin: 0 0 25px;
-    cursor: pointer;
-    transition-duration: 0.4s;
-    font-family: Impact;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-    border-radius: 5px;
+/******************************************************************
+*******				boton register      					*******
+*******************************************************************/
+#btnRegister{
     background-color: rgba(51, 144, 255, 0.5);
     height: 40px;
     width: 352px;
+}
+ /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(195,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+	position:relative;
+	background-color: rgba(15, 15, 15, 0.9);
+  	margin: auto; /* 15% from the top and centered */
+ 	padding: 25px;
+  	border: 1px solid #888;
+  	width: 30%; /* Could be more or less, depending on screen size */
+ 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+  	animation-name: animatetop;
+  	animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+.error_name {
+	color: red;
+}
+
+.errorlist li{
+	color: white;
 }

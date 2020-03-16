@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+	Home
+{% endblock %}
+{% block extra_head %}
+	<link rel="stylesheet" href="{% static 'css/topic.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+{% endblock extra_head %}
+{% block content %}
+	<div class="topic_cont">
+        <h1 class="topic_title">Select your topic</h1>
+        <div class="topic_buttons">
+			{% if topics %}
+				{% for topic in topics %}
+					<div>
+						<a href="{% url 'snake' %}?id={{ topic.id }}">
+							<button>
+								{{ topic.topic_name }}
+							</button>
+						</a>
+					</div>
+				{% endfor %}
+			{% else %}
+				<h1>
+					There are not topic objects in the database
+				</h1>
+			{% endif %}
+        </div>
+	</div>
+{% endblock %}

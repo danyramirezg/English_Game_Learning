@@ -3,7 +3,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from requests import get
 import os
-
+import requests
 
 @api_view(['GET'])
 def translate(request, word):

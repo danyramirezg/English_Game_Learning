@@ -1,21 +1,14 @@
-from rest_framework import status
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
-from myapp.models.user import User
+from rest_framework.generics import (ListCreateAPIView,RetrieveUpdateDestroyAPIView,)
+from rest_framework.permissions import IsAuthenticated
+from myapp.models.user import User_Profile
+from myapp.permissions import IsOwnerProfileOrReadOnly
 from myapp.serializers.user import UserSerializer
 from frontapp.forms import Custom_User_Form
 
 
-@api_view(['GET', 'POST'])
-def user_list(request):
-    """
-    List all code users, or create a new user.
-    """
-    if request.method == 'GET':
-        users = User.objects.all()
-        serializer = UserSerializer(users, many=True)
-        return Response(serializer.data)
+# Create your views here.
 
+<<<<<<< HEAD
     elif request.method == 'POST':
 
         serializer = UserSerializer(data=request.data)
@@ -23,15 +16,19 @@ def user_list(request):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+=======
+class UserProfileListCreateView(ListCreateAPIView):
+    queryset=User_Profile.objects.all()
+    serializer_class=UserSerializer
+    permission_classes=[IsAuthenticated]
+>>>>>>> 30d63991e03f1775520a1c2127e3384b238be859
+
+    def perform_create(self, serializer):
+        user=self.request.user
+        serializer.save(user=user)
 
 
-@api_view(['GET', 'PUT', 'DELETE'])
-def user_detail(request, pk):
-    try:
-        user = User.objects.get(pk=pk)
-    except User.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
-
+<<<<<<< HEAD
     if request.method == 'GET':
         serializer = UserSerializer(user)
         return Response(serializer.data)
@@ -72,3 +69,9 @@ def word_detail(request, pk):
     elif request.method == 'DELETE':
         snippet.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+=======
+class userProfileDetailView(RetrieveUpdateDestroyAPIView):
+    queryset=User_Profile.objects.all()
+    serializer_class=UserSerializer
+    permission_classes=[IsOwnerProfileOrReadOnly,IsAuthenticated]
+>>>>>>> 30d63991e03f1775520a1c2127e3384b238be859
