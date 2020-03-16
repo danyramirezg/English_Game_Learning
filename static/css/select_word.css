@@ -31,24 +31,12 @@
     background: rgba(15,15,15,0.5) url(../images/addWord.png) no-repeat center center;
 }
 
-.DivSelectWordNew, .DivSelectWordAct{
-    width: 250px;
-    height: 350px;
-    padding: 0;
-}
-
 .SelWordAct, .SelWordNew{
     font-family: sans-serif;
     font-size: 14px;
     width: 250px;
     height: 350px;
 }
-
-.addWord{
-    text-align: left;
-    padding-left: 35px;
-}
-
 
 #btnCancel{
     background-color: rgba(92, 92, 92, 0.5);
@@ -68,7 +56,7 @@ p {
 	color: red;
 }
 
-.left, .right, .up, .down, .topic {
+.topic {
 	color: white;
 }
 
