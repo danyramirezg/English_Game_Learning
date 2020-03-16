@@ -7,7 +7,7 @@ from myapp.views.user import UserProfileListCreateView, userProfileDetailView
 
 urlpatterns = [
     # User endpoints
-    path('api/pod_users/', user.User_list.as_view(), name='user_list'),
+    #path('api/pod_users/', user.User_list.as_view(), name='user_list'),
     #path('api/pod_users/', user.user_list),
     #path('api/pod_users/<int:pk>/', user.user_detail),
     # Topic endpoints
@@ -19,7 +19,7 @@ urlpatterns = [
     # translator API endpoint
     path('api/pod_words/<word>', translator.translate),
     #path('api/pod_token_login', token_login.Token_Login.as_view()),
-    path('api/pod_generate_token/', views.obtain_auth_token)
+    path('api/pod_generate_token/', views.obtain_auth_token),
     # gets all user profiles and create a new profile
     path("all-profiles", UserProfileListCreateView.as_view(),
          name="all-profiles"),
