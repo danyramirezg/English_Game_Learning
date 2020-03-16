@@ -3,6 +3,7 @@ from myapp.views import word, topic, user
 from myapp.views import translator
 from myapp.views import token_login
 from rest_framework.authtoken import views
+from myapp.views.user import UserProfileListCreateView, userProfileDetailView
 
 urlpatterns = [
     # User endpoints
@@ -19,4 +20,9 @@ urlpatterns = [
     path('api/pod_words/<word>', translator.translate),
     #path('api/pod_token_login', token_login.Token_Login.as_view()),
     path('api/pod_generate_token/', views.obtain_auth_token)
+    # gets all user profiles and create a new profile
+    path("all-profiles", UserProfileListCreateView.as_view(),
+         name="all-profiles"),
+    # retrieves profile details of the currently logged in user
+    path("profile/<int:pk>", userProfileDetailView.as_view(), name="profile"),
 ]

@@ -1,12 +1,13 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 """" This class create a User model """
 
 
-class User(models.Model):
-    user_name = models.CharField(max_length=60, blank=False, null=False, unique=True)
-    password = models.CharField(max_length=50, blank=False, null=False)
+class User_Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE,
+                                related_name="profile")
     cell_phone = models.CharField(max_length=20, blank=True, null=True)
     email = models.CharField(max_length=50, blank=False, null=False)
     word_attempt = models.IntegerField(default=7)
@@ -15,7 +16,7 @@ class User(models.Model):
     update_at = models.DateTimeField(default=timezone.now, editable=False)
 
     def __str__(self):
-        return self.user_name
+        return self.user.username
 
     class Meta:
         ordering = ['created_at']

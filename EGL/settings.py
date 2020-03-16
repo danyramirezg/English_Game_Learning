@@ -41,7 +41,11 @@ INSTALLED_APPS = [
     'frontapp',
     'base',
     'rest_framework',
-    'rest_framework.authtoken'
+    'rest_framework.authtoken',
+    'djoser',
+    'rest_framework_simplejwt',
+
+
 ]
 
 MIDDLEWARE = [
@@ -133,3 +137,9 @@ STATICFILES_DIRS = (
         )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
