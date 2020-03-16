@@ -1,14 +1,12 @@
 /******************************************************************
 *******				decoracion del footer					*******
 *******************************************************************/
-footer{
+footer{ 
 	background-color: rgba(16, 16, 90, 0.5);
 	height: 50px;
 	width: 100%;
-	border-top-size: 1px;
 	border-top-style: solid;
 	border-top-color: #CCCCCC;
-	position: fixed;
 	bottom:0;
 	color: white;
 	position: fixed; /*para que quede footer abajo*/
@@ -20,7 +18,6 @@ footer{
 footer p{
 	text-align: center;
 	line-height: 40px;
-	width: 100%;
 	margin: 0;
 	font-size: 12px;
 	font-family: sans-serif;
