@@ -18,7 +18,7 @@ form, p{
 /******************************************************************
 *******				Cajas de texto con imagen				*******
 *******************************************************************/
-input#user_name{
+input#username{
     background: #ffc url(../images/user.png) no-repeat left center;
     background-size: 30px 30px;
     height: 30px;
@@ -72,14 +72,14 @@ input#word{
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
+/* Modal Content/Box
 .modal-content {
 	position:relative;
 	background-color: rgba(15, 15, 15, 0.9);
-  	margin: auto; /* 15% from the top and centered */
+  	margin: auto; /* 15% from the top and centered 
  	padding: 25px;
   	border: 1px solid #888;
-  	width: 30%; /* Could be more or less, depending on screen size */
+  	width: 30%; /* Could be more or less, depending on screen size 
  	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   	-webkit-animation-name: animatetop;
 	-webkit-animation-duration: 0.4s;
@@ -87,7 +87,7 @@ input#word{
   	animation-duration: 0.4s;
 }
 
-/* Add Animation */
+/* Add Animation 
 @keyframes animatetop {
   from {top: -300px; opacity: 0}
   to {top: 0; opacity: 1}
@@ -100,3 +100,4 @@ input#word{
 .errorlist li{
 	color: white;
 }
+*/

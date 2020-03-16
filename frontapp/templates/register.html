@@ -13,15 +13,15 @@
 			<img id="imgDivHead" src="{% static 'images/register.png' %}">
 		</div>
 		<div id="form" class="form">
-			<form id="form-register" method="post" autocomplete="off" novalidate>
-				{% csrf_token %}
+			<form id="form-register" method="post" autocomplete="off">
+				<!--{% csrf_token %}-->
 				<input class="inputText" name="username" id="username" type="text" placeholder="Enter Username" autofocus="" required>
 				<input class="inputText" name="password" id="password" type="password" placeholder="Enter Password" autofocus="" required>
 				<input class="inputText" name="confirm_password" id="confirm_password" type="password" placeholder="Confirm Password" autofocus="" required>
 				<input class="inputText" name="email" id="email" type="email" placeholder="Enter Email" autofocus="" required>
 				<input class="inputText" name="cell_phone" id="phone" type="tel" placeholder="Enter CellPhone" autofocus="">
 				<input class="inputText" name="word_attempt" id="word" type="number" placeholder="Enter Word Attempts" value=7  autofocus="" required min="1">
-				<p id="bot"><input type="submit" id="btnRegister" class="button" value="Register">
+				<p id="bot"><input onclick="funValidateForm()" type="submit" id="btnRegister" class="button" value="Register">
 			</form>
 		</div>
 	</div>
