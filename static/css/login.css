@@ -8,7 +8,7 @@
 }
 
 /******************************************************************
-*******				cuadro texto username y la imagen				*******
+*******		cuadro texto username y la imagen				*******
 *******************************************************************/
 input#username{
     background:#ffc url(../images/user.png) no-repeat left center;

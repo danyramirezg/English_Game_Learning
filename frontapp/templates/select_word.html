@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+	EGL - Select Word
+{% endblock %}
+{% block extra_head %}
+	<script src="{% static 'js/select_word.js' %}"></script>
+	<link rel="stylesheet" href="{% static 'css/select_word.css' %}">
+{% endblock extra_head %}
+{% block content %} 
+    <div class="fondBlackSelectWord" id="divBody">
+        <table>
+            <tr>
+                <td colspan="3">
+                    <p class="title">TOPIC <b class="topic">Proffesions</b></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select class="SelWordAct" id="SelWordAct" multiple>
+                        <option value="1">nurse
+                        <option value="2">lawyer 
+                        <option value="3">fireman
+                        <option value="4">architect
+                        <option value="5">programmer
+                        <option value="6">baker
+                        <option value="7">waiter
+                        <option value="8">teacher
+                        <option value="9">pilot
+                        <option value="10">secretary
+                        <option value="11">designer
+                        <option value="12">author
+                        <option value="13">dentist
+                        <option value="14">farmer
+                        <option value="15">model
+                        <option value="16">plumber
+                    </select>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><input onclick="funUnAssingWord()" type="submit" id="btnUnAssign" class="button" value=""></td>
+                            <td><input onclick="funAssingWord()" type="submit" id="btnAssign" class="button" value=""></td>
+                        </tr>
+                        <tr>
+                            <td><input onclick="funAllUnAssingWord()" type="submit" id="btnAllUnAssign" class="button" value=""></td>
+                            <td><input onclick="funAllAssingWord()" type="submit" id="btnAllAssign" class="button" value=""></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input onclick="funAddWord()" type="submit" id="btnAddWord" class="button" value=""></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <select class="SelWordNew" id="SelWordNew" multiple> 
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div class="post">
+                        <input type="submit" id="btnCancel" name="btnCancel" class="button" value="Cancel">
+                        <input type="submit" id="btnApply" name="btnApply" class="button" value="Apply">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}

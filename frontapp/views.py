@@ -55,3 +55,10 @@ def topic(request):
 
 def user_config(request):
     return render(request, 'user_config.html')
+
+def select_word(request):
+    res = get('http://localhost:8000/api/pod_select_word')
+    topics = {}
+    if res.status_code == 200:
+        topics = res.json()
+    return render(request, 'select_word.html')

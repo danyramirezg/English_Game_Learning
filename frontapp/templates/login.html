@@ -1,4 +1,7 @@
 {% extends 'base.html' %}
+{% block title %}
+    EGL - Login
+{% endblock %}
 {% load static %}
 {% block extra_head %}
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
@@ -17,8 +20,8 @@
                 </div>
                 <p id="remember"><input type="checkbox" checked="checked" name="remember" id="remember">Remember me</p>
                 <div class="post">
-                    <p id="bot"><button onclick="" type="submit" id="btnLogin" name="btnLogin" class="button">Login</p>
                     <p id="bot"><button onclick="window.location='./register'" id="btnRegister" name="btnRegister" class="button">Register</p>
+                    <p id="bot"><button onclick="" type="submit" id="btnLogin" name="btnLogin" class="button">Login</p>
                 </div>
             </form>
         </div>

@@ -6,18 +6,16 @@ body {
 	background-position: center center;
 	background-attachment: fixed;
 	background-size: cover;
-	background-color: #FFFFFF;
-	margin: 0;
+	margin: 0 0 0 0;
 	justify-content: center;  /*todo el contenido centrado*/
 }
-
+ 
 /******************************************************************
 *******				contenedor "div" fondo negro			*******
 *******************************************************************/
 #divBody {
     background:rgba(15,15,15,0.5); /*1 100% transparente*/
     padding: 0px 5px 0px 9px;   /*adentro*/
-    /*text-align: center;*/
     margin: 30px auto; /*afuera*/
     border-radius: 8px;
 }
