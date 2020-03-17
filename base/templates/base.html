@@ -19,8 +19,10 @@
 				<a title="Home" href="http://localhost:8000/landing">
 					<img id="imgHome" src="{% static 'images/home.png' %}" alt="home"/>
 				</a>
-				<a class="logout" href="{% url 'logout' %}"><i class="power_off"></i>Logout
-				</a>
+				{% if user %}
+					<a class="logout" href="{% url 'logout' %}"><i class="power_off"></i>Logout
+					</a>
+				{% endif %}
             </div>
 		</header>
 			{% block content %}

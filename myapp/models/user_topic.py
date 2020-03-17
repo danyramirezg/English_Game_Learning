@@ -5,7 +5,7 @@ user create topics """
 
 
 class User_Topic(models.Model):
-    user = models.ForeignKey("User", on_delete=models.CASCADE)
+    user = models.ForeignKey("Profile", on_delete=models.CASCADE)
     topic = models.ForeignKey("Topic", on_delete=models.CASCADE)
 
     def __str__(self):

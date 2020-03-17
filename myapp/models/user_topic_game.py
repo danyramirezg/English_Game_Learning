@@ -5,7 +5,7 @@ which topics """
 
 
 class User_Topic_Game(models.Model):
-    user = models.ForeignKey("User", on_delete=models.CASCADE)
+    user = models.ForeignKey("Profile", on_delete=models.CASCADE)
     topic = models.ForeignKey("Topic", on_delete=models.CASCADE)
     # game = models.ForeignKey("Topic", on_delete=models.CASCADE)
     option = models.ForeignKey("Option_Game", on_delete=models.CASCADE)

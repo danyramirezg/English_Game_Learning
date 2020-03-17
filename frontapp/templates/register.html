@@ -15,9 +15,9 @@
 		<div id="form" class="form">
 			<form id="form-register" method="post" autocomplete="off">
 				{% csrf_token %}
-				<input class="inputText" name="user_name" id="username" type="text" placeholder="Enter Username" autofocus="" required>
-				<input class="inputText" name="password" id="password" type="password" placeholder="Enter Password" autofocus="" required>
-				<input class="inputText" name="confirm_password" id="confirm_password" type="password" placeholder="Confirm Password" autofocus="" required>
+				<input class="inputText" name="username" id="username" type="text" placeholder="Enter Username" autofocus="" required>
+				<input class="inputText" name="password1" id="password" type="password" placeholder="Enter Password" autofocus="" required>
+				<input class="inputText" name="password2" id="confirm_password" type="password" placeholder="Confirm Password" autofocus="" required>
 				<input class="inputText" name="email" id="email" type="email" placeholder="Enter Email" autofocus="" required>
 				<input class="inputText" name="cell_phone" id="phone" type="tel" placeholder="Enter CellPhone" autofocus="">
 				<input class="inputText" name="word_attempt" id="word" type="number" placeholder="Enter Word Attempts" value=7  autofocus="" required min="1">
