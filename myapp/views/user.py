@@ -50,29 +50,3 @@ def user_detail(request, pk):
     elif request.method == 'DELETE':
         user.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-
-
-@api_view(['GET', 'PUT', 'DELETE'])
-def word_detail(request, pk):
-    """
-    Retrieve, update or delete a code word.
-    """
-    try:
-        word = Word.objects.get(pk=pk)
-    except Word.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
-
-    if request.method == 'GET':
-        serializer = WordSerializer(word)
-        return Response(serializer.data)
-
-    elif request.method == 'PUT':
-        serializer = SnippetSerializer(snippet, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-    elif request.method == 'DELETE':
-        snippet.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)

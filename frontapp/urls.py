@@ -1,14 +1,19 @@
-from django.urls import path
-from frontapp import views
+from django.urls import path, include
+from frontapp.views import root, landing, login, logout, register, snake, topic
+from frontapp.views import user_config, select_word, activation_sent, activate
 
 
 urlpatterns = [
-            path('', views.root, name='root'),
-            path('landing', views.landing, name='landing'),
-            path('login', views.login, name='login'),
-            path('register', views.register, name='register'),
-            path('snake', views.snake, name='snake'),
-            path('topic', views.topic, name='topic'),
-            path('user_config', views.user_config, name='user_config'),
-            path('select_word', views.select_word, name='select_word')
+            path('', root.root, name='root'),
+            path('landing', landing.landing, name='landing'),
+            path('login', login.login, name='login'),
+            path('logout', logout.logout, name='logout'),
+            path('register', register.register, name='register'),
+            path('snake', snake.snake, name='snake'),
+            path('topic', topic.topic, name='topic'),
+            path('user_config', user_config.user_config, name='user_config'),
+            path('select_word', select_word.select_word, name='select_word'),
+            path('sent', activation_sent.activation_sent, name='activation_sent'),
+            path('activate/(<uidb64>[0-9A-Za-z_\-]+)/(<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})',
+                activate.activate, name='activate'),
         ]

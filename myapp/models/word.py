@@ -5,7 +5,7 @@ from django.utils import timezone
 
 
 class Word(models.Model):
-    user = models.ForeignKey("User", on_delete=models.CASCADE)
+    user = models.ForeignKey("Profile", on_delete=models.CASCADE)
     topic = models.ForeignKey("Topic", on_delete=models.CASCADE)
     word = models.CharField(max_length=30, blank=False, null=False, unique=True)
     translation = models.CharField(max_length=30, blank=False, null=False)
