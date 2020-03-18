@@ -1,13 +1,14 @@
 from frontapp.forms import RegisterForm
 from django.contrib.sites.shortcuts import get_current_site
-from django.utils.http import urlsafe_base64_decode
+from django.utils.http import urlsafe_base64_encode
 from django.utils.encoding import force_bytes
 from django.template.loader import render_to_string
 from django.shortcuts import render, redirect
-
+from django.contrib.auth.tokens import default_token_generator as token_generator
 
 def register(request):
     form = RegisterForm(request.POST)
+    print(form.errors)
     if form.is_valid():
         user = form.save()
         user.refresh_from_db()
