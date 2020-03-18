@@ -14,7 +14,7 @@
 			{% if topics %}
 				{% for topic in topics %}
 					<div>
-						<a href="{% url 'snake' %}?id={{ topic.id }}">
+						<a href="{% url 'select_word' %}?id={{ topic.id }}">
 							<button>
 								{{ topic.topic_name }}
 							</button>
