@@ -1,21 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
-	Home
+EGL - Home
 {% endblock %}
 {% block extra_head %}
 	<script src="{% static 'js/home.js' %}"></script>
 	<link rel="stylesheet" href="{% static 'css/user_config.css' %}">
-	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
 {% endblock extra_head %}
 {% block content %}
 	<div class="config_cont">
         <div class="config_buttons">
-            <div>
-                <button class="play" onclick="window.location='http://localhost:8000/snake'">Play</button>
-            </div>
-            <div>
-                <button class="Configuration" onclick="window.location='http://localhost:8000/snake'">Settings</button>
+            <p>Customize your game</p>
+            <div class="divButton">
+                <a href="./snake" class="button" id="btnPlay">PLAY</a>
+			    <a href="./topic" class="button" id="btnSett">SETTINGS</a>
             </div>
         </div>
     </div>
