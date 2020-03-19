@@ -14,7 +14,7 @@
 			{% if topics %}
 				{% for topic in topics %}
 					<div>
-						{% if user %}
+						{% if user.is_authenticated %}
 							<a href="{% url 'user_config' %}?id={{ topic.id }}">
 								<button>
 									{{ topic.topic_name }}
