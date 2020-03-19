@@ -17,7 +17,6 @@ def activate(request, uidb64, token):
         user.profile.register_confirmation = True
         user.save()
         auth_login(request, user)
-        return redirect('topic')
+        return redirect('success_register')
     else:
         return render(request, 'activation_invalid.html')
-

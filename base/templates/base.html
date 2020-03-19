@@ -20,8 +20,13 @@
 					<img id="imgHome" src="{% static 'images/home.png' %}" alt="home"/>
 				</a>
 				{% if user %}
-					<a class="logout" href="{% url 'logout' %}"><i class="power_off"></i>Logout
+					<a class="logout" href="{% url 'logout' %}">
+						<i class="power_off">
+						</i>Logout
 					</a>
+					<p>
+						{{ user }}
+					</p>
 				{% endif %}
             </div>
 		</header>

@@ -9,6 +9,8 @@ from django.core.mail import send_mail
 
 
 def register(request):
+    if request.user.is_authenticated:
+        return redirect('topic')
     form = RegisterForm(request.POST)
     if form.is_valid():
         user = form.save()
