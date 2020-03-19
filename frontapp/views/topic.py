@@ -7,4 +7,4 @@ def topic(request):
     topics = {}
     if res.status_code == 200:
         topics = res.json()
-    return render(request, 'topic.html', {'topics': topics})
+    return render(request, 'topic.html', {'topics': topics, 'user': request.user.username})
