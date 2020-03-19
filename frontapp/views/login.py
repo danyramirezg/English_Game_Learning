@@ -11,7 +11,7 @@ def login(request):
         user = authenticate(username=username, password=password)
         if user is not None:
             auth_login(request, user)
-        return redirect('landing')
+        return redirect('topic')
     else:
         form = LoginForm()
     return render(request, 'login.html', {'user': request.user.username})

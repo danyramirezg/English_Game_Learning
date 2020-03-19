@@ -5,10 +5,11 @@ from django.utils.encoding import force_bytes
 from django.template.loader import render_to_string
 from django.shortcuts import render, redirect
 from django.contrib.auth.tokens import default_token_generator as token_generator
+from django.core.mail import send_mail
+
 
 def register(request):
     form = RegisterForm(request.POST)
-    print(form.errors)
     if form.is_valid():
         user = form.save()
         user.refresh_from_db()
@@ -26,6 +27,6 @@ def register(request):
                 'uid': uid,
                 'token': token_generator.make_token(user),
             })
-        user.email_user(subject, message)
+        send_mail(subject, message, 'EGL-admin@gmail.com', [user.profile.email], fail_silently=False)
         return redirect('activation_sent')
     return render(request, 'register.html', {'user': request.user.username})

@@ -14,11 +14,19 @@
 			{% if topics %}
 				{% for topic in topics %}
 					<div>
-						<a href="{% url 'select_word' %}?id={{ topic.id }}">
-							<button>
-								{{ topic.topic_name }}
-							</button>
-						</a>
+						{% if user %}
+							<a href="{% url 'user_config' %}?id={{ topic.id }}">
+								<button>
+									{{ topic.topic_name }}
+								</button>
+							</a>
+						{% else %}
+							<a href="{% url 'snake' %}?id={{ topic.id }}">
+								<button>
+									{{ topic.topic_name }}
+								</button>
+							</a>
+						{% endif %}
 					</div>
 				{% endfor %}
 			{% else %}
