@@ -1,113 +1,22 @@
-.topic_cont {
+.divTopic {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-flow: column wrap;
 }
-.topic_title {
-    width: 100%;
-    text-align: center;
-    font-size: 60px;
-    color: #FFFFFF;
-    margin-top: 80px;
-}
 
-.topic_buttons {
-    width: 580px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    margin: auto;
-}
-
-/******************************************************************
-*******				Button Definition    					*******
-*******************************************************************/
-
-button {
-    background: rgba(214, 14, 41, 0.5);
-    background-image: -webkit-linear-gradient(top, #BB3D4E, #BB433D);
-    background-image: -moz-linear-gradient(top, #BB3D4E, #BB433D);
-    background-image: -ms-linear-gradient(top, #BB3D4E, #BB433D);
-    background-image: -o-linear-gradient(top, #BB3D4E, #BB433D);
-    background-image: linear-gradient(to bottom, #BB3D4E, #BB433D);
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    color: #FFFFFF;
-    font-family: sans-serif;
-    font-size: 30px;
-    font-weight: 100;
-    padding: 60px;
-    box-shadow: 1px 1px 20px 0px #C62452;
-    -webkit-box-shadow: 1px 1px 20px 0px #C62452;
-    -moz-box-shadow: 1px 1px 20px 0px #C62452;
-    text-shadow: 14px 1px 20px #000000;
-    border: solid rgba(237, 51, 60, 0.96) 0px;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
-    width: 250px;
-    height: 10px;
-}
-
-/******************************************************************
-*******				Hover effect                    		*******
-*******************************************************************/
-
-button:hover{
-    border: dotted rgba(214, 14, 41, 0.5) 0px no-repeat left center;
-    -webkit-border-radius: 60px;
-    -moz-border-radius: 60px;
-    border-radius: 60px;
-    text-decoration: none;
-    -webkit-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
-    transform: translateY(-15px);
-}
 
 /******************************************************************
 *******				Detail topic buttons			*******
 *******************************************************************/
 
-topic_buttons:hover{
-    background: rgba(249, 3, 3, 0.88);
+#btnTopic:hover{
+    background: rgba(249, 3, 3, 0.88) url(../images/topic.png) no-repeat left center;
     background-size: 70px 70px;
     background-position:left;
 }
-topic_buttons{
-    background: rgba(214, 14, 41, 0.8);
+#btnTopic{
+    background: rgba(214, 14, 41, 0.8) url(../images/topic.png) no-repeat left center;
     background-size: 70px 70px;
     background-position:left;
-}
-
-/*
-button {
-    width: 150px;
-    height: 60px;
-    font-size: 20px;
-    font-weight: 500;
-    margin: 20px;
-    border-radius: 15px;
-    border: none;
-    box-shadow: 0 12px 16px 0 rgba(195, 65, 96, 0.24),0 17px 50px 0 rgba(240, 120, 64, 0.19);
-    background-color: #b53436;
-    color: rgb(255, 255, 255);
-}
-button:hover {
-	opacity: 0.64;
-	transition: 0.4s;
-	cursor: pointer;
-}
-*/
-h1 {
-	color:red;
-	text-align: center;
-    font-family: sans-serif;
-    font-size: 70px;
-    font-style: oblique;
-    font-weight: 900;
-    font-variant: small-caps;
-    color: #FFFFFF;
-
 }
