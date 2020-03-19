@@ -18,6 +18,8 @@
 // http://rembound.com/articles/creating-a-snake-game-tutorial-with-html5
 // ------------------------------------------------------------
 
+window.words = {};
+
 // The function gets called when the window is fully loaded
 window.onload = function() {
     // Get the canvas and context
@@ -25,19 +27,32 @@ window.onload = function() {
     var context = canvas.getContext("2d");
     var input = $('#txtTras');
 	// get the topic name through the api
+	
 	let id = $('div#topic_id').text();
-	const url = 'http://127.0.0.1:8000/api/pod_topic/' + id;
+	let url = 'http://127.0.0.1:8000/api/pod_topic/' + id;
 	var topic;
 	$.getJSON(url, function (data) {
-  		topic = $(".topic").text(data.topic_name);
+  		$(".topic").text(data.topic_name);
 	});
-
+	// get words throught the api
+	
+	url = 'http://127.0.0.1:8000/api/pod_words';
+	$.getJSON(url, function(data){
+		//console.log(data);
+		for (let i = 0; i < data.length; i++) {
+			w = data[i];
+			name = w['word'];
+			trans = w['translation'];
+			window.words[name] = trans;
+		}
+		
+	});
     var left = $('#txtLeft');
     var right = $('#txtRight');
     var down = $('#txtDown');
     var up = $('#txtUp');
   
-    var words = {
+    /*var words = {
       nurse: "enfermera",
       lawyer: "abogado",
       fireman: "bombero",
@@ -62,7 +77,7 @@ window.onload = function() {
       architect: "arquitecto",
       astronaut: "astronauta",
       clown: "Payaso"
-    };
+    };*/
   
     // Timing and frames per second
     var lastframe = 0;
@@ -643,18 +658,30 @@ window.onload = function() {
       }
     }
   
-    function randomWord(obj) {
+    function randomWord(obj, picked_words) {
       var keys = Object.keys(obj);
-      return keys[(keys.length * Math.random()) << 0];
-    }
+	  let word;
+	  while (true) {
+	  	word = keys[(keys.length * Math.random()) << 0];
+		if (picked_words.includes(word) === true) {
+		  continue;
+		}
+		break;
+	  }
+      return word;
+	}
   
     function setWords() {
-      left.val(randomWord(words));
-      right.val(randomWord(words));
-      down.val(randomWord(words));
-      up.val(randomWord(words));
+	  let picked_words = [];
+	  left.val(randomWord(window.words, picked_words));
+	  picked_words.push(left.val());
+      right.val(randomWord(window.words, picked_words));
+	  picked_words.push(right.val());
+      down.val(randomWord(window.words, picked_words));
+	  picked_words.push(down.val());
+      up.val(randomWord(window.words, picked_words));
     }
-  
+
     // Keyboard event handler
     function onKeyDown(e) {
       if (gameover) {
