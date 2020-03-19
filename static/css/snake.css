@@ -115,3 +115,7 @@ p {
 table td{
     text-align: center;
 }
+
+#topic_id {
+	display: none;
+}

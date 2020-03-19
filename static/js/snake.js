@@ -24,7 +24,14 @@ window.onload = function() {
     var canvas = document.getElementById("viewport");
     var context = canvas.getContext("2d");
     var input = $('#txtTras');
-    var topic = $(".topic").text("Professions");
+	// get the topic name through the api
+	let id = $('div#topic_id').text();
+	const url = 'http://127.0.0.1:8000/api/pod_topic/' + id;
+	var topic;
+	$.getJSON(url, function (data) {
+  		topic = $(".topic").text(data.topic_name);
+	});
+
     var left = $('#txtLeft');
     var right = $('#txtRight');
     var down = $('#txtDown');
