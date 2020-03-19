@@ -4,6 +4,8 @@ from django.shortcuts import render, redirect
 
 
 def login(request):
+    if request.user.is_authenticated:
+        return redirect('topic')
     form = LoginForm(request.POST)
     if form.is_valid():
         username = form.cleaned_data.get('username')
@@ -11,7 +13,7 @@ def login(request):
         user = authenticate(username=username, password=password)
         if user is not None:
             auth_login(request, user)
-        return redirect('user_config')
+        return redirect(request.GET.get('next', 'topic'))
     else:
         form = LoginForm()
-    return render(request, 'login.html', {'user': request.user.username})
+    return render(request, 'login.html')

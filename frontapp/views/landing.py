@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 
 def landing(request):
-    return render(request, 'landing.html', {'user': request.user.username})
+    if request.user.is_authenticated:
+        return redirect('topic')
+    return render(request, 'landing.html')

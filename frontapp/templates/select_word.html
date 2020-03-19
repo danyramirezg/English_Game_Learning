@@ -12,28 +12,15 @@
         <table>
             <tr>
                 <td colspan="3">
-                    <p class="title">TOPIC <b class="topic">Professions</b></p>
+					<p class="title">TOPIC <b class="topic">{{ topic.topic_name }}</b></p>
                 </td>
             </tr>
             <tr>
                 <td>
                     <select class="SelWordAct" id="SelWordAct" multiple>
-                        <option value="1">nurse
-                        <option value="2">lawyer 
-                        <option value="3">fireman
-                        <option value="4">architect
-                        <option value="5">programmer
-                        <option value="6">baker
-                        <option value="7">waiter
-                        <option value="8">teacher
-                        <option value="9">pilot
-                        <option value="10">secretary
-                        <option value="11">designer
-                        <option value="12">author
-                        <option value="13">dentist
-                        <option value="14">farmer
-                        <option value="15">model
-                        <option value="16">plumber
+						{% for word in words %}
+						<option value="{{ word.id }}">{{ word.word }} || {{ word.translation }}
+						{% endfor %}
                     </select>
                 </td>
                 <td>
