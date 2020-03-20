@@ -30,5 +30,5 @@ def register(request):
                 'token': token_generator.make_token(user),
             })
         send_mail(subject, message, 'EGL-admin@gmail.com', [user.profile.email], fail_silently=False)
-        return redirect('activation_sent')
+        return 'Link sent! Please check your email'
     return render(request, 'register.html', {'user': request.user.username})

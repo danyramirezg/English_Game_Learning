@@ -19,6 +19,7 @@
 // ------------------------------------------------------------
 
 window.words = {};
+window.topic_id = undefined;
 
 // The function gets called when the window is fully loaded
 window.onload = function() {
@@ -27,24 +28,27 @@ window.onload = function() {
     var context = canvas.getContext("2d");
     var input = $('#txtTras');
 	// get the topic name through the api
-	
-	let id = $('div#topic_id').text();
-	let url = 'http://127.0.0.1:8000/api/pod_topic/' + id;
+	var HOST = 'http://localhost:8000';
+
+	window.topic_id = $('div#topic_id').text();
+	let url = HOST + '/api/pod_topic/' + window.topic_id;
 	var topic;
 	$.getJSON(url, function (data) {
   		$(".topic").text(data.topic_name);
 	});
 	// get words throught the api
 	
-	url = 'http://127.0.0.1:8000/api/pod_words';
+	url = HOST + '/api/pod_words';
+
 	$.getJSON(url, function(data){
-		//console.log(data);
 		for (let i = 0; i < data.length; i++) {
 			let w = data[i];
 			let name = w['word'];
 			let trans = w['translation'];
-			let topic_id = w['topic_id'];
-			window.words[name] = trans;
+			let id = w['topic'];
+			if (window.topic_id === id.toString()) {
+				window.words[name] = trans;
+			}
 		}
 		
 	});
@@ -52,7 +56,7 @@ window.onload = function() {
     var right = $('#txtRight');
     var down = $('#txtDown');
     var up = $('#txtUp');
-  
+
     /*var words = {
       nurse: "enfermera",
       lawyer: "abogado",
