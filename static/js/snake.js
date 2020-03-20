@@ -40,9 +40,10 @@ window.onload = function() {
 	$.getJSON(url, function(data){
 		//console.log(data);
 		for (let i = 0; i < data.length; i++) {
-			w = data[i];
-			name = w['word'];
-			trans = w['translation'];
+			let w = data[i];
+			let name = w['word'];
+			let trans = w['translation'];
+			let topic_id = w['topic_id'];
 			window.words[name] = trans;
 		}
 		
