@@ -1,6 +1,6 @@
 .fondBlackSelectWord{
-    width: 640px;
-    height: 500px;
+    width: 600px;
+    height: 480px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -34,8 +34,8 @@
 .SelWordAct, .SelWordNew{
     font-family: sans-serif;
     font-size: 14px;
-    width: 250px;
-    height: 350px;
+    width: 200px;
+    height: 250px;
 }
 
 #btnCancel{
@@ -51,7 +51,7 @@
 }
 
 p {
-    font-size: 24px;
+    font-size: 20px;
     font-family: sans-serif;
 	color: red;
 }
@@ -62,4 +62,10 @@ p {
 
 .title {
     font-style:italic;
+}
+
+p.secondTitle{
+    font-style:italic;
+    font-size: 14px;
+    color:#fff;
 }

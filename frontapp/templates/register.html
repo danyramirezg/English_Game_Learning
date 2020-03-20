@@ -14,9 +14,9 @@
 		</div>
 		<div id="form" class="form">
 			<form id="form-register" method="post" autocomplete="off">
-				{% csrf_token %}
+				
 				<input class="inputText" name="username" id="username" type="text" placeholder="Enter Username" autofocus="" required>
-				<input class="inputText" name="password1" id="password" type="password" placeholder="Enter Password" autofocus="" required>
+				<input class="inputText" name="password1" id="password" type="password" placeholder="Enter Password" autofocus="" pattern="^(?=.{10,}$)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$" required>
 				<input class="inputText" name="password2" id="confirm_password" type="password" placeholder="Confirm Password" autofocus="" required>
 				<input class="inputText" name="email" id="email" type="email" placeholder="Enter Email" autofocus="" required>
 				<input class="inputText" name="cell_phone" id="phone" type="tel" placeholder="Enter CellPhone" autofocus="">

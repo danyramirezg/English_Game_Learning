@@ -15,9 +15,18 @@
 					<p class="title">TOPIC <b class="topic">{{ topic.topic_name }}</b></p>
                 </td>
             </tr>
+            <tr> 
+                <td>
+                    <p class="secondTitle">Select Word</p>
+                <td>
+                </td>
+                <td>
+                    <p class="secondTitle">User's Word</p>
+                </td>
+            </tr>
             <tr>
                 <td>
-                    <select class="SelWordAct" id="SelWordAct" multiple>
+                    <select class="SelWordAct" id="SelWordAct" multiple="10">
 						{% for word in words %}
 						<option value="{{ word.id }}">{{ word.word }} || {{ word.translation }}
 						{% endfor %}

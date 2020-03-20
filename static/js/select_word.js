@@ -19,3 +19,15 @@ function funAllUnAssingWord(){
         $('#SelWordNew option').appendTo($('#SelWordAct'));
     }
 }
+
+
+function funAddWord(){
+    var word = prompt ("Add Word:");
+    if(!word == "" || !word == null){
+       var selOption = document.getElementById('SelWordNew');
+       var option = document.createElement("option");
+       option.text = word;
+       option.value = -9;
+       selOption.add(option);
+    }
+}

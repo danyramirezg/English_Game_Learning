@@ -63,3 +63,7 @@ config_buttons{
     font-variant: small-caps;
     color: #FFFFFF;
 }
+
+p{
+    font-size: 32px;
+}

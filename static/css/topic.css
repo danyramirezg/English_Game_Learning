@@ -1,11 +1,13 @@
 .divTopic {
     width: 100%;
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
     flex-flow: column wrap;
 }
 
-
+p{
+    font-size: 32px;
+}
 /******************************************************************
 *******				Detail topic buttons			*******
 *******************************************************************/
