@@ -1,0 +1,24 @@
+.divTopic {
+    width: 100%;
+    /*display: flex;*/
+    justify-content: center;
+    flex-flow: column wrap;
+}
+
+p{
+    font-size: 32px;
+}
+/******************************************************************
+*******				Detail topic buttons			*******
+*******************************************************************/
+
+#btnTopic:hover{
+    background: rgba(249, 3, 3, 0.88) url(../images/topic.png) no-repeat left center;
+    background-size: 70px 70px;
+    background-position:left;
+}
+#btnTopic{
+    background: rgba(214, 14, 41, 0.8) url(../images/topic.png) no-repeat left center;
+    background-size: 70px 70px;
+    background-position:left;
+}

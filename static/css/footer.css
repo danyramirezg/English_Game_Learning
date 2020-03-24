@@ -1,0 +1,24 @@
+/******************************************************************
+*******				decoracion del footer					*******
+*******************************************************************/
+footer{ 
+	background-color: rgba(16, 16, 90, 0.5);
+	height: 50px;
+	width: 100%;
+	border-top-style: solid;
+	border-top-color: #CCCCCC;
+	bottom:0;
+	color: white;
+	position: fixed; /*para que quede footer abajo*/
+}
+
+/******************************************************************
+*******				la letra del footer					*******
+*******************************************************************/
+footer p{
+	text-align: center;
+	line-height: 40px;
+	margin: 0;
+	font-size: 12px;
+	font-family: sans-serif;
+}

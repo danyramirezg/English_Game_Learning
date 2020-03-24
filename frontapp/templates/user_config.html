@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+EGL - Home
+{% endblock %}
+{% block extra_head %}
+	<script src="{% static 'js/home.js' %}"></script>
+	<link rel="stylesheet" href="{% static 'css/user_config.css' %}">
+{% endblock extra_head %}
+{% block content %}
+	<div class="config_cont">
+            <div class="divText">
+                <p>Customize your game</p>
+            </div>
+            <div class="divButton">
+                <a href="{% url 'snake' %}?id={{ project_id }}" class="buttonRed" id="btnPlay">Play</a>
+			    <a href="{% url 'select_word' %}?id={{ project_id }}" class="buttonRed" id="btnSett">Settings</a>
+            </div>
+    </div>
+{% endblock %}
+

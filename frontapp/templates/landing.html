@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+	EGL - Home
+{% endblock %}
+{% block extra_head %}
+	<link rel="stylesheet" href="{% static 'css/landing.css' %}">
+{% endblock extra_head %}
+{% block content %} 
+	<div class="divLanding">
+		<div class="divText">
+			<p>Welcome!</p>
+		</div>
+		<div class="divButton"> 
+			<a href="./topic" class="buttonRed" id="btnPlay">Play</a>
+			<a href="../login" class="buttonRed" id="btnLogin">Login</a>
+			<a href="./register" class="buttonRed" id="btnRegister">Register</a>
+		</div>
+	</div>
+{% endblock %}

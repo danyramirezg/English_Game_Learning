@@ -1,0 +1,72 @@
+.fondBlackSelectWord{
+    width: 600px;
+    height: 480px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto; /*afuera*/
+}
+
+.button{
+    background-size: 45px 45px;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+}
+
+#btnAssign{
+    background: rgba(15,15,15,0.5) url(../images/singleRight.png) no-repeat center center;
+}
+#btnAllAssign{
+    background: rgba(15,15,15,0.5) url(../images/multiRight.png) no-repeat center center;
+}
+
+#btnUnAssign{
+    background: rgba(15,15,15,0.5) url(../images/singleLeft.png) no-repeat center center;
+}
+#btnAllUnAssign{
+    background: rgba(15,15,15,0.5) url(../images/multiLeft.png) no-repeat center center;
+}
+#btnAddWord{
+    background: rgba(15,15,15,0.5) url(../images/addWord.png) no-repeat center center;
+}
+
+.SelWordAct, .SelWordNew{
+    font-family: sans-serif;
+    font-size: 14px;
+    width: 200px;
+    height: 250px;
+}
+
+#btnCancel{
+    background-color: rgba(92, 92, 92, 0.5);
+    width: 200px;
+    height: 50px;
+}
+
+#btnApply{
+    background-color: rgba(51, 144, 255, 0.5);
+    width: 200px;
+    height: 50px;
+}
+
+p {
+    font-size: 20px;
+    font-family: sans-serif;
+	color: red;
+}
+
+.topic {
+	color: white;
+}
+
+.title {
+    font-style:italic;
+}
+
+p.secondTitle{
+    font-style:italic;
+    font-size: 14px;
+    color:#fff;
+}

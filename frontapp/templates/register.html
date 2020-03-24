@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title%}
+	EGL - Register
+{% endblock%}
+{% load static %}
+{% block extra_head %}
+	<link rel="stylesheet" href="{% static 'css/register.css' %}">
+	<script src="{% static 'js/register.js' %}"></script>
+{% endblock extra_head %}
+{% block content %}
+	<div class="fondBlackRegister" id="divBody">
+		<div id="headBoard">
+			<img id="imgDivHead" src="{% static 'images/register.png' %}">
+		</div>
+		<div id="form" class="form">
+			<form id="form-register" method="post" autocomplete="off">
+				{% csrf_token %}
+				<input class="inputText" name="username" id="username" type="text" placeholder="Enter Username" autofocus="" required>
+				<input class="inputText" name="password1" id="password" type="password" placeholder="Enter Password" autofocus="" pattern="^(?=.{10,}$)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$" required>
+				<input class="inputText" name="password2" id="confirm_password" type="password" placeholder="Confirm Password" autofocus="" required>
+				<input class="inputText" name="email" id="email" type="email" placeholder="Enter Email" autofocus="" required>
+				<input class="inputText" name="cell_phone" id="phone" type="tel" placeholder="Enter CellPhone" autofocus="">
+				<input class="inputText" name="word_attempt" id="word" type="number" placeholder="Number Of Repetitions Of A Word" autofocus="" required min="1">
+				<p id="bot"><input onclick="funValidateForm()" type="submit" id="btnRegister" class="button" value="Register">
+			</form>
+		</div>
+	</div>
+{% endblock %}

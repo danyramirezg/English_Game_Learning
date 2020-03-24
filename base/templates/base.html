@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+		<title>
+			{% block title %}
+			{% endblock %}
+		</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		{% block extra_head %}
+		{% endblock %}
+		<link rel="stylesheet" href="{% static 'css/header.css' %}">
+		<link rel="stylesheet" href="{% static 'css/footer.css' %}">
+		<link rel="stylesheet" href="{% static 'css/common.css' %}">
+	</head>
+	<body>
+		<header>
+			{% if user.is_authenticated %}
+				<div class="divHeader">
+					{% if user %}
+						<a class="username">User: <b class="username2">{{ user.username }}</b></a>
+						<a title="Home" href="{% url 'landing' %}">
+							<img id="imgHome" src="{% static 'images/home.png' %}" alt="home"/>
+						</a>
+						<a title="Logout" class="logout" href="{% url 'logout' %}">
+							<img id="imgLogout" src="{% static 'images/logout.png' %}" alt="Logout"/>
+						</a>
+					{% endif %}
+				</div>
+			{% endif %}
+		</header>
+			{% block content %}
+
+			{% endblock %}
+		<footer>
+			<p>
+				Copyright EGL 2020
+			</p>
+		</footer>
+	</body>
+</html>

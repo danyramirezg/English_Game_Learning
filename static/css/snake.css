@@ -1,0 +1,121 @@
+/******************************************************************
+*******				Borde rojo del juego					*******
+*******************************************************************/
+canvas{
+    border: 5px double rgba(6, 39, 129, 0.5);
+}
+
+/******************************************************************
+*******				fondo gris del snake					*******
+*******************************************************************/
+.game{
+    width: 700px;
+    height: 540px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+}
+
+/******************************************************************
+*******				Contenedor del juego					*******
+*******************************************************************/
+.container{ 
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/******************************************************************
+*******				    Campos texto	    				*******
+*******************************************************************/
+.inputText{
+    width: 90px;
+    height: 30px;
+}
+
+input#txtRight{
+    background: #ffc url(../images/right.png) no-repeat left center;
+    background-size: 20px 20px;
+    margin: 0 0 0px;
+    font-size: 11px;
+}
+
+input#txtLeft{
+    background: #ffc url(../images/left.png) no-repeat left center;
+    background-size: 20px 20px;
+    margin: 0 0 0px;
+    font-size: 11px;
+}
+
+input#txtDown{
+    background: #ffc url(../images/down.png) no-repeat left center;
+    background-size: 20px 20px;
+    margin: 0 0 0px;
+    font-size: 11px;
+}
+
+input#txtUp{
+    background: #ffc url(../images/top.png) no-repeat left center;
+    background-size: 20px 20px;
+    margin: 0 0 0px;
+    font-size: 11px;
+}
+
+input#txtTras{
+    background: #ffc url(../images/traslate.png) no-repeat left center;
+    background-size: 20px 20px;
+    margin: 0 0 0px;
+    font-size: 11px;
+}
+
+/******************************************************************
+*******	    Definición de tipos de letra y colores	 		*******
+*******************************************************************/
+p {
+    font-size: 16px;
+    font-family: sans-serif;
+	color: red;
+}
+
+.left, .right, .up, .down, .topic {
+	color: white;
+}
+
+.title {
+    font-style:italic;
+}
+
+/******************************************************************
+*******	                Contenedor del Topico	    		*******
+*******************************************************************/
+.divTopic{
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    border: 5px double rgba(6, 39, 129, 0.5);
+    background:rgba(71, 69, 69, 0.5);
+    padding: 8px;
+}
+
+/******************************************************************
+*******	                Contenedor de palabras	    		*******
+*******************************************************************/
+.words{
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    border: 5px double rgba(6, 39, 129, 0.5);
+    background:rgba(71, 69, 69, 0.5);
+    padding: 8px;
+}
+
+
+table td{
+    text-align: center;
+}
+
+#topic_id {
+	display: none;
+}

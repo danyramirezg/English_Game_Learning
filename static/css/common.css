@@ -1,0 +1,150 @@
+/******************************************************************
+*******				fondo de pantalla						*******
+*******************************************************************/
+body {
+	background-image: url(../images/Fondo-juego.png);
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	margin: 0 0 0 0;
+	justify-content: center;  /*todo el contenido centrado*/
+}
+ 
+/******************************************************************
+*******				contenedor "div" fondo negro			*******
+*******************************************************************/
+#divBody {
+    background:rgba(15,15,15,0.5); /*1 100% transparente*/
+    padding: 0px 5px 0px 9px;   /*adentro*/
+    border-radius: 8px;
+}
+
+/******************************************************************
+*******				Definicion de campo texto				*******
+*******************************************************************/
+.inputText{
+    padding-left: 45px;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    margin: 0 0 25px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+/******************************************************************
+*******				Definicion botones						*******
+*******************************************************************/
+.button{
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; /*los botones en linea y al lado*/
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; /*sobre el boton el cursor*/
+    transition-duration: 0.4s;
+    font-family: Impact;   /*Tipo de letra*/
+    /*box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);*/
+    border-radius: 5px;
+}
+
+/******************************************************************
+*******				Button Red Definition				*******
+*******************************************************************/
+.buttonRed {
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; /*los botones en linea y al lado*/
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; /*sobre el boton el cursor*/
+    transition-duration: 0.4s;
+    font-family: Impact;   /*Tipo de letra*/
+    border-radius: 5px;
+    background: rgba(214, 14, 41, 0.5);
+    background-image: -webkit-linear-gradient(top, #BB3D4E, #BB433D);
+    background-image: -moz-linear-gradient(top, #BB3D4E, #BB433D);
+    background-image: -ms-linear-gradient(top, #BB3D4E, #BB433D);
+    background-image: -o-linear-gradient(top, #BB3D4E, #BB433D);
+    background-image: linear-gradient(to bottom, #BB3D4E, #BB433D);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-family: sans-serif;
+    font-weight: 100;
+    padding: 40px;
+    box-shadow: 1px 1px 20px 0px #C62452;
+    -webkit-box-shadow: 1px 1px 20px 0px #C62452;
+    -moz-box-shadow: 1px 1px 20px 0px #C62452;
+    text-shadow: 14px 1px 20px #000000;
+    border: solid rgba(237, 51, 60, 0.96) 0px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    width: 200px;
+    height: 10px;
+}
+
+/******************************************************************
+*******				Hover effect            				*******
+*******************************************************************/
+.buttonRed:hover{
+    border: dotted rgba(214, 14, 41, 0.5) 0px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+    text-decoration: none;
+    -webkit-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px);
+}
+/******************************************************************
+*******				imagen del head del contenedor			*******
+*******************************************************************/
+img#imgDivHead{
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    margin: -50px 0 12px 0;
+    position: relative; 
+    border-radius: 50%;
+}
+
+/******************************************************************
+*******				div de la imagen del formulario			*******
+*******************************************************************/
+#headBoard{
+    padding: 0px 9px 0px 9px;
+    text-align: center;
+}
+
+/******************************************************************
+*******				div Text Title		                    *******
+*******************************************************************/
+.divText{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 70px;
+    font-style: oblique;
+    font-weight: 900;
+    font-variant: small-caps;
+    color: #FFFFFF;
+    margin-top: 90px;
+}
+
+/******************************************************************
+*******				Alignment buttons				*******
+*******************************************************************/
+.divButton{
+    text-align: center;
+}
+
+p{
+    color: #FFFFFF;
+}
