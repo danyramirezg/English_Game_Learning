@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}
+    EGL - Login
+{% endblock %}
+{% load static %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock extra_head %}
+{% block content %}
+    <div class="fondBlackLogin" id="divBody">
+        <div id="headBoard">
+            <img id="imgDivHead" src="{% static 'images/login.png' %}">
+        </div>
+        <div id="form" class="form">
+            <form id="form-login" action="" method="post" autocomplete="off">
+                {% csrf_token %}
+                <div class="textCenter">
+                    <input class="inputText" name="username" type="text" id="username" placeholder="Enter Username" autofocus="" required="">
+                    <input name="password" type="password" id="password" placeholder="Enter Password" required="" class="inputText">
+                </div>
+                <p id="remember"><input type="checkbox" checked="checked" name="remember" id="remember">Remember me</p>
+                <div class="post">
+                    <p id="bot"><button onclick="window.location='./register'" id="btnRegister" name="btnRegister" class="button">Register</p>
+                    <p id="bot"><button onclick="" type="submit" id="btnLogin" name="btnLogin" class="button">Login</p>
+                </div>
+            </form>
+        </div>
+        <div class="container">
+            <span class="psw"><a id="forgot" href="#">Forgot password?</a></span>
+        </div>
+    </div>
+{% endblock %}

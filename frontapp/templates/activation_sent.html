@@ -1,0 +1,26 @@
+
+{% load static %}
+{% block title %}
+{% endblock %}
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'css/sendMail.css' %}">
+{% endblock extra_head %}
+{% block content %}
+        <div class="divSendMail">
+            <p style="margin-bottom: 0cm; line-height: 100%">
+            <img src="{% static 'images/sendMail.png' %}" name="Imagen1" align="center" width="52" height="52" border="0"/>
+            <br/>
+            <br/>
+            <p align="center" style="margin-bottom: 0cm; line-height: 100%"><font face="FreeSans, sans-serif"><span style="font-variant: normal"><font color="#222222"><font size="5" style="font-size: 21pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">We have sent an email to your email. </span></span></span></font></font></span></font>
+            </p>
+            <p align="center" style="margin-bottom: 0cm; line-height: 100%"><br/>
+            </p>
+            <p align="center" style="margin-bottom: 0cm; line-height: 100%"><font face="FreeSans, sans-serif"><span style="font-variant: normal"><font color="#222222"><font size="5" style="font-size: 21pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Click</span></span></span></font></font></span><span style="font-variant: normal"><font color="#222222"><font size="5" style="font-size: 21pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
+            the confirmation link in the email to start enjoying EGL.</span></span></span></font></font></span></font></p>
+            <p align="center" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+            </p>
+            <p align="center" style="margin-bottom: 0cm; line-height: 100%"><img src="{% static 'images/logoEGL.png' %}" name="Imagen2" align="ceter" width="203" height="121" border="0"/>
+            <br/>
+        </div>
+{% endblock %}

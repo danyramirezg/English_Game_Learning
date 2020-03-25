@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+	EGL - Home
+{% endblock %}
+{% block extra_head %}
+	<link rel="stylesheet" href="{% static 'css/topic.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+{% endblock extra_head %}
+{% block content %}
+	<div class="divTopic">
+		<div class="divText">
+			<p>Select your topic!</p>
+		</div>
+        <div class="divButton">
+			{% if topics %}
+				{% for topic in topics %}
+						{% if user.is_authenticated %}
+							<a href="{% url 'user_config' %}?id={{ topic.id }}" class="buttonRed" id="btnTopic">
+								{{ topic.topic_name }}
+							</a>
+						{% else %}
+							<a href="{% url 'snake' %}?id={{ topic.id }}" class="buttonRed" id="btnTopic">
+								{{ topic.topic_name }}
+							</a>
+						{% endif %}
+				{% endfor %}
+			{% else %}
+				<h1>
+					There are not topic objects in the database
+				</h1>
+			{% endif %}
+        </div>
+	</div>
+{% endblock %}
