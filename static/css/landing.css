@@ -1,0 +1,58 @@
+.divLanding{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+p{
+    font-size: 32px;
+}
+/******************************************************************
+*******				Button PLAY detail      				*******
+*******************************************************************/
+#btnPlay:hover{
+    background: rgba(249, 3, 3, 0.88) url(../images/play.png) no-repeat left center;
+    background-size: 70px 70px;
+    background-position:left;
+}
+#btnPlay{
+    background: rgba(214, 14, 41, 0.8) url(../images/play.png) no-repeat left center;
+    background-size: 70px 70px;
+    background-position:left;
+}
+
+/******************************************************************
+*******				Button LOGIN detail  				*******
+*******************************************************************/
+#btnLogin:hover{
+    background: rgba(249, 3, 3, 0.88) url(../images/loginLandding.png) no-repeat left center;
+    background-size: 70px 70px;
+    background-position:left;
+}
+#btnLogin{
+    background: rgba(214, 14, 41, 0.8) url(../images/loginLandding.png) no-repeat left center;
+    background-size: 70px 70px;
+    background-position:left;
+}
+
+/******************************************************************
+*******				Button REGISTER detail			      *******
+*******************************************************************/
+#btnRegister:hover{
+    background: rgba(249, 3, 3, 0.88) url(../images/registerLandding.png) no-repeat left center;
+    background-size: 70px 70px;
+    background-position:left;
+}
+#btnRegister{
+    background: rgba(214, 14, 41, 0.8) url(../images/registerLandding.png) no-repeat left center;
+    background-size: 70px 70px;
+    background-position:left;
+}
+
+/******************************************************************
+*******				Alignment buttons				*******
+*******************************************************************/
+.divButton{
+    text-align: center;
+}
+
