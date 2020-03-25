@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+    EGL - Success Registration
+{% endblock %}
+{% load static %}
+{% block extra_head %}
+		<link rel="stylesheet" href="{% static 'css/landing.css' %}">
+{% endblock extra_head %}
+{% block content %}
+		<div class="divText">
+			{% if user %}
+				<p>
+					User {{ user }} Was Registrated Successfuly
+				</p>
+			{% endif %}
+		</div>
+		<div class="divButton"> 
+			<a href="./topic" class="button">Home</a>
+		</div>
+{% endblock %}
