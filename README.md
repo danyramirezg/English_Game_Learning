@@ -7,8 +7,20 @@
 <p></p>
 
 Did you know English is by far the world’s most studied language? And that 20% of the world speaks it?
-English is by far the most commonly studied foreign language in the world, followed by French at a distant second.
+
+English is the most commonly studied foreign language in the world, followed by French at a distant second.
 That's why we created an easy game that allows the users to have fun while they’re practicing English vocabulary. Our idea is to continue creating more educational and fun games in the near future.
+
+# Landing page
+
+<br>
+
+<img align="center" src="https://i.imgur.com/cBpsbs1.png" width="100%"/>
+<img align="center" src="https://i.imgur.com/cXG77NV.png" width="100%"/>
+
+
+<br>
+
 
 # The minimum viable product (MVP)
 
@@ -23,9 +35,16 @@ The idea of this game is that the user learns how write correctly vocabulary, th
 <img align="center" src="https://i.imgur.com/XmE7pZj.png" width="100%"/>
 <br>
 
-## Installation
+## Snake Game in the web:
 
-If you want to install this game in your local machine:
+Would you like to play it in the web? 
+Use this link:
+
+http://52.55.234.129:8000/landing
+
+## Installation in the Local machine
+
+If you want to install the game in your local machine:
 
 ```bash
 git clone https://github.com/danyramirezg/English_Game_Learning.git
@@ -59,6 +78,9 @@ Go to play... Good luck!
 
 <p></p>
 
+<img align="center" src="https://i.imgur.com/jAdak72.png" width="100%"/>
+<p></p>
+
 ## Data Modelling 
 
 This diagram shows how data is being stored
@@ -68,6 +90,8 @@ This diagram shows how data is being stored
 
 <br>
 
+## Deployed
+To carry out the deployment of this Backend and Frontend application we used the Amazon Web Service AWS with the Elastic Compute Cloud (EC2) service. Having defined the one where the application will be installed as a production environment, we proceed to study options for ways to deploy the application developed in Django and found that it could be deployed on a machine with an Ubuntu 18.04 operating system. And an Apache2 web server.
 
 ## Authors
 
@@ -76,3 +100,11 @@ This diagram shows how data is being stored
 [Yennifer Tobon](https://github.com/yenniferTobon)
 
 [Daniela Ramirez Gomez](https://github.com/danyramirezg)
+
+## Blog
+
+[EGL](https://medium.com/@TobonYennifer/egl-english-game-learning-a7ca172e4c2)
+
+## License
+
+[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
