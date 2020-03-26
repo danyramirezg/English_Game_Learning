@@ -19,6 +19,7 @@
 // ------------------------------------------------------------
 
 window.words = {};
+window.id = "";
 
 // The function gets called when the window is fully loaded
 window.onload = function() {
@@ -28,7 +29,7 @@ window.onload = function() {
     var input = $('#txtTras');
 	// get the topic name through the api
 	
-	let id = $('div#topic_id').text();
+	window.id = $('div#topic_id').text();
 	let url = 'http://52.55.234.129:8000/api/pod_topic/' + id;
 	var topic;
 	$.getJSON(url, function (data) {
@@ -44,7 +45,9 @@ window.onload = function() {
 			let name = w['word'];
 			let trans = w['translation'];
 			let topic_id = w['topic_id'];
-			window.words[name] = trans;
+			if (parseInt(window.id, -1)  === topic_id) {
+				window.words[name] = trans;
+			}
 		}
 		
 	});

@@ -104,7 +104,3 @@ To carry out the deployment of this Backend and Frontend application we used the
 ## Blog
 
 [EGL](https://medium.com/@TobonYennifer/egl-english-game-learning-a7ca172e4c2)
-
-## License
-
-[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
